@@ -16,7 +16,7 @@ function setup()
 
 function draw()
 {
-  //For loop is just to speed up.
+  // For loop is just to speed up.
   // Modify i < x to increase/decrease speed.
   for (var i = 0; i < 10; i++){
     //Work out the angle and the distance.
@@ -42,10 +42,6 @@ function draw()
     stroke(n % 256, 255, 255);
     //noStroke();
     strokeWeight(1);
-    //If previous point exists create a new point.
-    // Ellipse technically doesn't need to be here.
-    //As it doesn't need a previous coord but seems
-    //to work fine.
     if (prev != null){
       line(prev.x, prev.y, x, y);
       //ellipse(x, y, 4, 4);
