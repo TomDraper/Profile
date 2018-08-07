@@ -8,6 +8,51 @@ body {
   background-size: auto;
 }
 
+.slider {
+    -webkit-appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+.slider:hover
+{
+  opacity: 1;
+}
+/* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+}
+
+.button {
+	width: 100%;
+	height: 64px;
+  vertical-align: top;
+  text-align: middle;
+	min-width: 160px;
+	max-width: 160px;
+	font-size: 16px;
+	font-family: "Helvetica" "Arial" "Verdana";
+	border: 1px solid black;
+	background-color: WhiteSmoke;
+	/*border-right: 1px solid black;*/
+}
+
 .container-fluid {
   display: table;
   height: 100%;
@@ -35,7 +80,12 @@ p{
 .vcenter {
   display: inline-block;
   vertical-align: middle;
+  text-align: center;
   float: none;
+}
+.sketchClass
+{
+  height: 512px;
 }
 
 h1{
