@@ -3,7 +3,10 @@
   <base href ="../../"></base>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="javaProjects/3nPlusOne/sketch.js"></script>
+  <script src="javaProjects/CellularAutomaton/sketch.js"></script>
+  <script src="javaProjects/CellularAutomaton/grid.js"></script>
+  <script src="javaProjects/CellularAutomaton/cell.js"></script>
+  <script src="javaProjects/CellularAutomaton/mouseFunctions.js"></script>
   <script src="../libs/p5.dom.js"></script>
   <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet"></link>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
@@ -28,22 +31,8 @@
     <div class = "row">
       <div class = "col-xs-1 col-sm-1 col-md-1 col-lg-1">.</div>
       <div class = "col-xs-10 col-sm-10 col-md-10 col-lg-10 singleColumn">
-        <h1>3n + 1 Problem</h1>
-        <p>There is an unsolved math problem that is simple to understand but
-          has eluded scientists for decades. It goes like this:
-          If n is even you divide n by 2.
-          If n is odd you times n by 3 and add 1. (3n + 1).
-          The problem is that all the numbers tested so far converge back to 1 eventually.
-          The question is to mathematically prove whether n will always return to 1 or not.
-        </p>
-
-        <p>I am not about to answer that question.<br></br>
-          I am however going to show you some cool ways to visualise the numbers
-          that I made below. Largely inspired by the <a href="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A">Numberphile YouTube channel</a>,
-          and in particular <a href= "https://www.youtube.com/watch?v=5mFpVDpKX70">this video</a>.
-          The speed slider below will tell you how many times the sketch is iterating over the algorithm
-          each frame. High settings will slow the sketch down; and it also decreases accuracy due to a
-          slight error in my code.
+        <h1>Cellular Automaton</h1>
+        <p>Yes. Yes Yes.
         </p>
       </div>
       <div class = "col-xs-1 col-sm-1 col-md-1 col-lg-1">.</div>
@@ -51,18 +40,27 @@
 
     <div class = "row">
       <div class = "col-xs-1 col-sm-1 col-md-1 col-lg-1">.</div>
-        <div class = "col-xs-10 col-sm-10 col-md-10 col-lg-10 vcenter" id="sketchDiv">
-            <button class="button" onclick="reset(0)">Circle Visualisation</button>
-            <button class="button" onclick="reset(1)">Horizontal Visualisation</button>
-            <button class="button" onclick="toggleUniqueNumbers()">Toggle Uniques Only</button>
-            <button class="button" onclick="toggleDrawGrid()">Toggle Grid</button>
-            <button class="button" onclick="toggleStop()">Toggle Stop</button>
-            <br></br>
-            <p id="speedText">Speed</p>
-            <input type ="range" min="1" max="500" value ="50" class="slider" id="speedSlider"></input>
-            <p id ="currentX">.</p>
-            <br></br>
+        <div class = "col-xs-10 col-sm-10 col-md-7 col-lg-7 vcenter cellSketch" id="sketchDiv">
           <div id ="sketchHolder"></div>
+        </div>
+        <div class = "col-md-3 col-lg-3 vcenter">
+          <button class="button" onclick="reset()">Reset</button><br><br>
+          <button class="button" onclick="drawStartConditions()">Draw Start</button>
+          <button class="button" onclick="resetStartGrid()">Reset Start</button>
+          <p id="speedText">Frame Rate: 30 fps</p>
+          <input type ="range" min="1" max="30" value ="30" class="slider" id="speedSlider"></input>
+          <p id="colText">Columns: 10</p>
+          <input type ="range" min="10" max="100" value ="10" class="slider" id="colSlider"></input>
+          <p id="rowText">Rows: 10</p>
+          <input type ="range" min="10" max="100" value ="10" class="slider" id="rowSlider"></input>
+          <p>Rules</p>
+
+          <button class="button" onclick="reset(0)">Game Of Life</button>
+          <button class="button" onclick="reset(1)">Majority Vote</button><br><br>
+          <button class="button" onclick="reset(2)">Odd</button><br>
+          <p>Choose Start Position</p>
+
+
         </div>
       </div>
       <div class = "col-xs-1 col-sm-1 col-md-1 col-lg-1">.</div>

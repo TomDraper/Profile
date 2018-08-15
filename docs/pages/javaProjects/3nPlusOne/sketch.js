@@ -1,14 +1,17 @@
 var n = 3; // Starting n.
 var x = 3; // CurrentNumber ie: 3x + 1.
-var origin;
+var origin; // Starting Value
 var pInc = 10; // Amount of pixels between branchs.
-var currentPos;
-var knownValues;
-var sizing = 1;
+var currentPos; // CurrentPos (Used in Horizontal approach)
+var knownValues; // Array of known values only adding uniques.
+var sizing = 1; // The distance between each number.
 var currentScale = 0;
-var canvas;
+
+//HTML Variables.
+var canvas; // The canvas.
+// Mode to determine which function to use. Needlessly complicated for its use at the minute.
 var modeEnum = Object.freeze({Circle: 0, Horizontal: 1})
-var mode = modeEnum.Circle;
+var mode = modeEnum.Circle; //
 var uniqueNumbers = false;
 var drawgrid = false;
 var speedSlider;
@@ -19,9 +22,12 @@ var xText;
 
 function setup()
 {
+  //Retrieve the div of the canvas.
   var canvasDiv = document.getElementById('sketchDiv');
+  //Find the amount its offset from the edge in pixels.
   var width = canvasDiv.offsetWidth;
-  var sketchCanvas = createCanvas(width,512);
+  var height = canvasDiv.offsetHeight;
+  var sketchCanvas = createCanvas(width,height);
   console.log(sketchCanvas);
   //sketchCanvas.parent("myCanvas");
   //canvas = createCanvas(512, 512);
@@ -180,10 +186,6 @@ function drawGrid()
     line(0, j, width, j);
   }
 }
-
-
-
-
 
 function drawCircle()
 {

@@ -10,7 +10,7 @@ body {
 
 .slider {
     -webkit-appearance: none;
-    width: 100%;
+    width: 90%;
     height: 25px;
     background: #d3d3d3;
     outline: none;
@@ -86,6 +86,11 @@ p{
 .sketchClass
 {
   height: 512px;
+}
+.cellSketch
+{
+  max-width: 512px;
+  min-height: 512px;
 }
 
 h1{
