@@ -20,6 +20,8 @@ function mouseReleased()
       grid.cells[i][j].changed = false;
     }
   }
+  window.clearInterval(speedChanged);
+  speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10)
 }
 
 function mouseDragged()
@@ -28,6 +30,8 @@ function mouseDragged()
   {
     return;
   }
+  window.clearInterval(speedChanged);
+  speedChanged = window.setInterval(function(){main();}, 1)
   for (let i = 0; i < cols; i++)
   {
     for (let j = 0; j < rows; j++)

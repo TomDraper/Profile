@@ -14,6 +14,7 @@ var speedSlider;
 var choosingStart;
 var startGrid;
 var dontDrag;
+var speedChanged;
 
 function setup()
 {
@@ -34,6 +35,7 @@ function setup()
   colSlider = document.getElementById('colSlider');
   rowSlider = document.getElementById('rowSlider');
   speedSlider = document.getElementById('speedSlider');
+  speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10);
   colSlider.oninput = function()
   {
     //dontDrag = true;
@@ -60,12 +62,15 @@ function setup()
   speedSlider.oninput = function()
   {
     //dontDrag = true;
-    speedText.innerHTML = "Frame Rate: " + speedSlider.value + " fps";
-    frameRate(speedSlider.value);
+    speedText.innerHTML = "Speed: " + speedSlider.value;
+    window.clearInterval(speedChanged);
+    speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10)
+    //frameRate(speedSlider.value);
   }
   //createCanvas(1024, 1024);
   background(0);
   frameRate(30);
+
   // grid = new Grid();
   // setStartConditions();
   reset(0);
@@ -110,7 +115,7 @@ function reset(rule)
   }
 }
 
-function draw()
+function main()
 {
   //background(255);
   //console.log(choosingStart);
