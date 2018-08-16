@@ -1,14 +1,18 @@
-// function mousePressed()
-// {
-//   for (let i = 0; i < cols; i++)
-//   {
-//     for (let j = 0; j < rows; j++)
-//     {
-//       grid.cells[i][j].clicked(mouseX, mouseY, choosingStart, true);
-//     }
-//   }
-//   console.log("Click");
-// }
+function mousePressed()
+{
+  if (mouseX < 0 || mouseX > width || mouseY < 0 || mouseY > height)
+  {
+    return;
+  }
+  for (let i = 0; i < cols; i++)
+  {
+    for (let j = 0; j < rows; j++)
+    {
+      grid.cells[i][j].clicked(mouseX, mouseY, choosingStart, true);
+    }
+  }
+  console.log("Click");
+}
 
 function mouseReleased()
 {
@@ -20,8 +24,8 @@ function mouseReleased()
       grid.cells[i][j].changed = false;
     }
   }
-  window.clearInterval(speedChanged);
-  speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10)
+  // window.clearInterval(speedChanged);
+  // speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10)
 }
 
 function mouseDragged()
@@ -30,8 +34,8 @@ function mouseDragged()
   {
     return;
   }
-  window.clearInterval(speedChanged);
-  speedChanged = window.setInterval(function(){main();}, 1)
+  // window.clearInterval(speedChanged);
+  // speedChanged = window.setInterval(function(){main();}, 1)
   for (let i = 0; i < cols; i++)
   {
     for (let j = 0; j < rows; j++)

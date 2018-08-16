@@ -8,6 +8,7 @@ var currentRule;
 var colText;
 var rowText;
 var speedText;
+var simText;
 var colSlider;
 var rowSlider;
 var speedSlider;
@@ -32,6 +33,7 @@ function setup()
   colText = document.getElementById('colText');
   rowText = document.getElementById('rowText');
   speedText = document.getElementById('speedText');
+  simText = document.getElementById('simText');
   colSlider = document.getElementById('colSlider');
   rowSlider = document.getElementById('rowSlider');
   speedSlider = document.getElementById('speedSlider');
@@ -46,7 +48,7 @@ function setup()
     colSlider.value++;
     colText.innerHTML = "Columns: " + colSlider.value;
     }
-
+    reset(currentRule);
   }
   rowSlider.oninput = function()
   {
@@ -58,6 +60,8 @@ function setup()
     rowSlider.value++;
     rowText.innerHTML = "Rows: " + rowSlider.value;
     }
+
+    reset(currentRule);
   }
   speedSlider.oninput = function()
   {
@@ -79,24 +83,18 @@ function setup()
 function reset(rule)
 {
   choosingStart = false;
+  simText.innerHTML = "SIMULATING!";
+  window.clearInterval(speedChanged);
+  speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10);
+
   cols = colSlider.value;
   rows = rowSlider.value;
-  //console.log(cols + " / " + rows);
   grid = new Grid();
-  //console.log(startGrid);
-  console.log("Columns: " + cols + "  Start Grid Length: " + startGrid.cells.length + "  Grid Length: " + grid.cells.length);
   if (startGrid.cells.length != grid.cells.length){
-    console.log("NewStartGrid!");
-    console.log(grid);
-    console.log(startGrid);
     resetStartGrid();
-    console.log("NewStartGrid 2nd Page!");
-    console.log(grid);
-    console.log(startGrid);
   }
-  console.log("Columns: " + cols + "  Start Grid Length: " + startGrid.cells.length + "  Grid Length: " + grid.cells.length);
   setStartConditions();
-  //console.log("Reset called, rule was: " + rule);
+
   switch(rule)
   {
     case 0:
@@ -215,19 +213,23 @@ function main()
       grid = new Grid();
       setStartConditions();
       choosingStart = true;
+      simText.innerHTML = "Drawing Start Tiles!";
+      window.clearInterval(speedChanged);
+      speedChanged = window.setInterval(function(){main();}, 1)
       return;
     }
     if (choosingStart == true){
       choosingStart = false;
+
       return;
     }
   }
 
   function resetStartGrid()
   {
-    //grid = new Grid();
+    grid = new Grid();
     startGrid = new Grid();
-    saveStartGrid();
+    //saveStartGrid();
   }
 
   function GameOfLife(a, d, c)
