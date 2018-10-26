@@ -37,8 +37,8 @@ class Cell
     if (this.state == states.alive){
       push();
 
-      //fill(255 - hSpeed, 255 - sSpeed, 255);
-      fill(0, 0, 0);
+      fill(255 - hSpeed, 255 - sSpeed, 255);
+      //fill(0, 0, 0);
       rect(this.x, this.y, this.w, this.h);
       pop();
       //console.log("state is equal to false");

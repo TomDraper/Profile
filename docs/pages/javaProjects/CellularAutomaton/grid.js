@@ -40,8 +40,9 @@ class Grid
       returngrid[x] = [];
       for (let y = 0; y < rows; y++)
       {
-        var newCell = new Cell(x * colSize, y * rowSize, colSize, rowSize, grid.cells[x][y].counter);
-        returngrid[x][y] = newCell;
+        returngrid[x][y] = new Cell(grid.cells[x][y].x, grid.cells[x][y].y, grid.cells[x][y].w, grid.cells[x][y].h, grid.cells[x][y].counter);
+        //var newCell = new Cell(x * colSize, y * rowSize, colSize, rowSize, grid.cells[x][y].counter);
+      //  returngrid[x][y] = newCell;
       }
     }
     return returngrid;

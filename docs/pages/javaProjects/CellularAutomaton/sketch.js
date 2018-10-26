@@ -37,10 +37,12 @@ function setup()
   colSlider = document.getElementById('colSlider');
   rowSlider = document.getElementById('rowSlider');
   speedSlider = document.getElementById('speedSlider');
-  speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10);
+  speedChanged = window.setInterval(function(){main();}, speedSlider.value);
   colSlider.oninput = function()
   {
     //dontDrag = true;
+    window.clearInterval(speedChanged);
+    speedChanged = window.setInterval(function(){main();}, 1);
     if (colSlider.value % 2 == 0)
     {
     colText.innerHTML = "Columns: " + colSlider.value;
@@ -48,11 +50,16 @@ function setup()
     colSlider.value++;
     colText.innerHTML = "Columns: " + colSlider.value;
     }
-    reset(currentRule);
+    cols = colSlider.value;
+    resetStartGrid();
+    choosingStart = false;
+    drawStartConditions();
   }
   rowSlider.oninput = function()
   {
     //dontDrag = true;
+    window.clearInterval(speedChanged);
+    speedChanged = window.setInterval(function(){main();}, 1);
     if (rowSlider.value % 2 == 0)
     {
     rowText.innerHTML = "Rows: " + rowSlider.value;
@@ -60,15 +67,17 @@ function setup()
     rowSlider.value++;
     rowText.innerHTML = "Rows: " + rowSlider.value;
     }
-
-    reset(currentRule);
+    rows = rowSlider.value;
+    resetStartGrid();
+    choosingStart = false;
+    drawStartConditions();
   }
   speedSlider.oninput = function()
   {
     //dontDrag = true;
     speedText.innerHTML = "Speed: " + speedSlider.value;
     window.clearInterval(speedChanged);
-    speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10)
+    speedChanged = window.setInterval(function(){main();}, speedSlider.value)
     //frameRate(speedSlider.value);
   }
   //createCanvas(1024, 1024);
@@ -84,8 +93,7 @@ function reset(rule)
 {
   choosingStart = false;
   simText.innerHTML = "SIMULATING!";
-  window.clearInterval(speedChanged);
-  speedChanged = window.setInterval(function(){main();}, speedSlider.value * 10);
+
 
   cols = colSlider.value;
   rows = rowSlider.value;
@@ -111,6 +119,8 @@ function reset(rule)
       //console.log("Something went wrong with reset, rule set to: " + currentRule);
       break;
   }
+  window.clearInterval(speedChanged);
+  speedChanged = window.setInterval(function(){main();}, speedSlider.value);
 }
 
 function main()
@@ -178,10 +188,9 @@ function main()
   }
 
   function setStartConditions(){
-    // if (grid.cells.length != startGrid.cells.length){
-    //   grid = new Grid();
-    //   startGrid = new Grid();
-    // }
+    if (grid.cells.length != startGrid.cells.length){
+      resetStartGrid();
+    }
     for (let i = 0; i < cols; i++)
     {
       for (let j = 0; j < rows; j++)
@@ -218,11 +227,10 @@ function main()
       speedChanged = window.setInterval(function(){main();}, 1)
       return;
     }
-    if (choosingStart == true){
-      choosingStart = false;
-
-      return;
-    }
+    // if (choosingStart == true){
+    //   choosingStart = false;
+    //   return;
+    // }
   }
 
   function resetStartGrid()
