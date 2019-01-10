@@ -1,0 +1,71 @@
+<head>
+  <base href =""></base>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.6.1/p5.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="javaProjects/Mandelbrot.js"></script>
+  <script src="../libs/p5.dom.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet"></link>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+		integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></link>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+  <link rel="stylesheet" href="../menubar.css"> </link>
+  <script type = "text/javascript" src = "../menubar.js"></script>
+  <link rel="stylesheet" href="../mainstyle.css"></link>
+</head>
+<body>
+  <div class = "container-fluid">
+
+    <div class="row">
+      <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 menu">
+            <input type="button" class="menubutton" onclick="location.href = '../index.html';" value = "Home" />
+            <input type="button" class="menubutton" onclick="location.href = 'games.html';" value = "Games" />
+            <input type="button" class="menubutton" onclick="location.href = 'java.html';" value = "Java" />
+            <input type="button" class="menubutton" onclick="location.href = 'web.html';" value = "Web/Sql" />
+      </div>
+    </div>
+    <div class="row">
+      <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 vcenter">
+        <h1>Mandlebrot Visualisation</h1>
+        <p>Visualisation of the Mandlebrot set. Try zooming in on an edge.
+          I've included some buttons to full screen visualisation bits.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 vcenter">
+        <p class = "vcenter" id = "XValue">XValue: </p>
+          <input type ="number" min="-2.0" max="2.0" value ="0.0" step = "0.01" id="xValue"></input>
+        <p class = "vcenter" id = "YValue">YValue:</p>
+        <input type ="number" min="-2.0" max="2.0" value ="0.0" step = "0.01" id="yValue"></input>
+    </div>
+
+      <div class = "col-xs-12 col-sm-6 col-md-6 col-lg-6 vcenter">
+        <p class = "vcenter" id = "realBoundsX_Text">Lower Bounds (Real):</p>
+          <input type ="range" min="-2.0" max="0.0" value ="-2.0" class="slider" step = "0.01" id="realBoundsX"></input>
+        <p class = "vcenter" id = "realBoundsY_Text">Upper Bounds (Real):</p>
+        <input type ="range" min="0.0" max="2.0" value ="2.0" class="slider" step = "0.01" id="realBoundsY"></input>
+    </div>
+    <div class = "col-xs-12 col-sm-6 col-md-6 col-lg-6 vcenter">
+        <p class = "vcenter" id = "imaginaryBoundsX_Text">Lower Bounds (i):</p>
+        <input type ="range" min="-2.0" max="0.0" value ="-2.0" class="slider" step = "0.01" id="imaginaryBoundsX"></input>
+        <p class = "vcenter" id = "imaginaryBoundsY_Text">Upper Bounds (i):</p>
+        <input type ="range" min="0.0" max="2.0" value ="2.0" class="slider" step = "0.01" id="imaginaryBoundsY"></input>
+      </div>
+    </div>
+    <div class="row">
+      <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 vcenter">
+        <p>Zoom:</p><p id = ZoomSlider_Text></p>
+        <input type ="range" min="1.0" max="100.0" value ="1.0" class="slider" step = "1" id="ZoomSlider"></input>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 vcenter">
+        <h1 id = "stopDisplay"></h1>
+        <div id = "sketchHolder" class = "vcenter"></div>
+      </div>
+    </div>
+
+
+</body>
