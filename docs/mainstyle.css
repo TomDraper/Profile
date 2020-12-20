@@ -85,12 +85,13 @@ p{
 }
 .sketchClass
 {
-  height: 512px;
+  width: 360 px;
+  height: 360 px;
 }
 .cellSketch
 {
-  max-width: 512px;
-  min-height: 512px;
+  max-width: 360px;
+  min-height: 360px;
 }
 
 h1{
