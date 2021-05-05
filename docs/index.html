@@ -7,50 +7,83 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class = "container">
+<!-- Navbar and it's related contents -->
+<nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark " id = "followme">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#" style="padding-left: 20px">Home</a>
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" style="margin-right: 20px">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="padding-left:40px;">
+    <ul class="navbar-nav">
+      <li class="nav-item" style="border-right: 1px solid slategrey">
+        <a class="nav-link" href="./pages/game_design.html">Game Design</a>
+      </li>
+      <li class="nav-item" style="border-right: 1px solid slategrey">
+        <a class="nav-link" href="#">Javascript / Web</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Art / Animation</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class = "container" style="margin-top: 40px">
 <!--- Title bar section - displayed on all pages. --->
   <div class = "row title_bar">
     <div class = "col-md-7">
       <h1>Tom's Portfolio</h1>
       <p> A hand made website to show off that:</br>
-        - I can code.</br>
-        - I know my way around some "fancy" software.</br>
+        - I can code, and explain said code.</br>
+        - I am competent in a large amount of software.</br>
         - I will be a valuable asset to you and your company.</p>
+    </div>
+    <div class = "col-md-5">
+
     </div>
   </div>
 <!--- Thumbnail Row section - Used to show responsive thumbnail tiles. --->
   <div class = "row thumb_row">
+    <!-- Column 1 -->
     <div class = "col-md-4">
       <div class="thumbnail">
-        <a href="./images/lights.jpg">
-          <img src="./images/lights.jpg" alt="Lights" style="width:100%">
+        <a href="./images/game_design_thumb.png">
+          <img class = "thumb_images" src="./images/game_design_thumb.png" alt="Games Design Thumbnail" style="width:100%; ">
         </a>
           <div class="caption">
-            <p>This is a story all about how my life got flipped turned upside down and I'd like to take a minute just sit right there, I'll tell you how I became a prince of bel-air.</p>
+            <p>My first interest was Games Animation but from there moved to all around joy for the creation and development of games. With learning C# and Unity in university the ability to code has given me freedom to explore game concepts and ideas without being bound to just the editor tools.</p>
           </div>
       </div>
     </div>
+    <!-- Column 2 -->
     <div class = "col-md-4">
       <div class="thumbnail">
-        <a href="./images/lights.jpg">
-          <img src="./images/lights.jpg" alt="Lights" style="width:100%">
+        <a href="#blank_sketch_piece.html">
+          <img class = "thumb_images" src="./images/genetic_salesman_thumb.jpg" alt="Web Thumbnail" style="width:100%;">
         </a>
           <div class="caption">
-            <p>This is a  different story of a different length to show fluidity.</p>
+            <p>I use p5 often as a quick prototyping tool or just to explore interesting equations or concepts. I've collated some of the more interesting projects for your enjoyment here with source code available.</p>
           </div>
       </div>
     </div>
+    <!-- Column 3 -->
     <div class = "col-md-4">
       <div class="thumbnail">
         <a href="./images/lights.jpg">
-          <img src="./images/lights.jpg" alt="Lights" style="width:100%">
+          <img class = "thumb_images" src="./images/lights.jpg" alt="Lights" style="width:100%">
         </a>
           <div class="caption">
-            <p>Are you really ever going to write more than a paragraph underneath these? Well probably it's you, you're quite verbose. Even during this testing you've managed to smash out an easy paragraph of fucking nothing.</p>
+            <p>Besides computers I love drawing and art; I play guitar and recently picked up a ukelele to play duets with my long-term partner. We regularly host (Except during lockdown) board games or quiz nights. I love the Dark Souls series and Texas Hold-Em and tend to get on well with people from a wide scope of backgrounds.</p>
           </div>
       </div>
     </div>
   </div>
 </div>
+<!-- Necessary script for bootstrap collapse feature-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
 </body>
 </html>

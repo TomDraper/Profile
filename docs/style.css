@@ -1,31 +1,31 @@
 .caption{
-  text-align: center;
-  padding: 10px 5px 10px;
+  text-align: justify;
+  padding: 10px 5px 5px;
 }
-.thumb_row{
-  padding-top: 10px;
-}
+
 .thumbnail{
+  margin-top: 10px;
   border-width: 1px;
   border-style: solid;
-  border-radius: 5px;
+  border-radius: 10px;
+  background-color: white;
+}
+.thumb_images {
+  border-radius: 8px;
 }
 .title_bar{
   padding-top: 20px;
 }
-.sketch_display{
-  align-items: center;
-  align-content: center;
-  align-self: center;
-  text-align: center;
+iframe {
+  display: block;
+}
+body {
+  background-color: darkgrey;
 }
 @media (min-width: 640px){
-
-
 }
 
 @media (min-width: 768px){
-
 }
 
 @media (min-width: 1024px){
