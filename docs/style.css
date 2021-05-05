@@ -1,0 +1,40 @@
+.caption{
+  text-align: center;
+  padding: 10px 5px 10px;
+}
+.thumb_row{
+  padding-top: 10px;
+}
+.thumbnail{
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 5px;
+}
+.title_bar{
+  padding-top: 20px;
+}
+.sketch_display{
+  align-items: center;
+  align-content: center;
+  align-self: center;
+  text-align: center;
+}
+@media (min-width: 640px){
+
+
+}
+
+@media (min-width: 768px){
+
+}
+
+@media (min-width: 1024px){
+
+
+
+}
+
+@media (min-width: 1200px){
+
+
+}

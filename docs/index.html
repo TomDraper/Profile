@@ -1,43 +1,56 @@
 <!DOCTYPE html>
+<html>
 <head>
-  <base href =""></base>
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display" rel="stylesheet"></link>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
-		integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"></link>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
-  <link rel="stylesheet" href="menubar.css"> </link>
-  <script type = "text/javascript" src = "menubar.js"></script>
-  <link rel="stylesheet" href="mainstyle.css"></link>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class = "container-fluid">
-    <div class="row">
-      <div class = "col-xs-12 col-sm-12 col-md-12 col-lg-12 menu">
-					<!--<button onclick="menuClick()" class="menubutton">Menu</button>
-					<div id="menudropdown" class="menucontent">-->
-						<input type="button" class="menubutton"
-						onclick="location.href = 'index.html';" value = "Home" />
-						<input type="button" class="menubutton" onclick="location.href = 'pages/games.html';" value = "Games" />
-						<input type="button" class="menubutton" onclick="location.href = 'pages/java.html';" value = "Java" />
-						<input type="button" class="menubutton" onclick="location.href = 'pages/web.html';" value = "Web/Sql" />
-					<!--</div>-->
+<div class = "container">
+<!--- Title bar section - displayed on all pages. --->
+  <div class = "row title_bar">
+    <div class = "col-md-7">
+      <h1>Tom's Portfolio</h1>
+      <p> A hand made website to show off that:</br>
+        - I can code.</br>
+        - I know my way around some "fancy" software.</br>
+        - I will be a valuable asset to you and your company.</p>
+    </div>
+  </div>
+<!--- Thumbnail Row section - Used to show responsive thumbnail tiles. --->
+  <div class = "row thumb_row">
+    <div class = "col-md-4">
+      <div class="thumbnail">
+        <a href="./images/lights.jpg">
+          <img src="./images/lights.jpg" alt="Lights" style="width:100%">
+        </a>
+          <div class="caption">
+            <p>This is a story all about how my life got flipped turned upside down and I'd like to take a minute just sit right there, I'll tell you how I became a prince of bel-air.</p>
+          </div>
       </div>
     </div>
-
-    <div class = "row">
-      <div class = "col-xs-1 col-sm-1 col-md-1 col-lg-1">.</div>
-      <div class = "col-xs-10 col-sm-10 col-md-10 col-lg-10 singlecolumn">
-        <h1>Thomas Frederick Draper</h1>
-        <p>This is a small repository to simply show off a few of the things that
-          I've been working on the last 18 months.
-
-          These have been personal hobbies/projects and not built for production so most
-          of the art is blocks/spheres but hopefully you will find the fundamental
-          aspects of each apparant.
-
-
-        </p>
+    <div class = "col-md-4">
+      <div class="thumbnail">
+        <a href="./images/lights.jpg">
+          <img src="./images/lights.jpg" alt="Lights" style="width:100%">
+        </a>
+          <div class="caption">
+            <p>This is a  different story of a different length to show fluidity.</p>
+          </div>
       </div>
-      <div class = "col-xs-1 col-sm-1 col-md-1 col-lg-1">.</div>
     </div>
+    <div class = "col-md-4">
+      <div class="thumbnail">
+        <a href="./images/lights.jpg">
+          <img src="./images/lights.jpg" alt="Lights" style="width:100%">
+        </a>
+          <div class="caption">
+            <p>Are you really ever going to write more than a paragraph underneath these? Well probably it's you, you're quite verbose. Even during this testing you've managed to smash out an easy paragraph of fucking nothing.</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
+</html>
