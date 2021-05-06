@@ -16,6 +16,9 @@
 .title_bar{
   padding-top: 30px;
 }
+.caption {
+  padding: 10px 10px 10px;
+}
 iframe {
   display: block;
 }
