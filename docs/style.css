@@ -19,10 +19,14 @@
 .caption {
   padding: 10px 10px 10px;
 }
+
 iframe {
+  scrolling: "no";
   width: 100%;
-  height: 100%;
+  height: 500px;
+  border: 1px solid black;
 }
+
 body {
   background-color: darkgrey;
 }
