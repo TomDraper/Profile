@@ -54,9 +54,9 @@
     </div>
   </div>
   <div class = "jumbotron title_bar">
-    <h1 class = "display-6">Genetic Algorithms</h1>
+    <h1 class = "display-6">Cool stuff you can do here</h1>
     <hr class="my-4">
-    <p class = "lead">Genetic algorithms fascinate me, especially with the popularity of neural networks in recent years my fondness has only grown. I sought to understand their building blocks which lead me down genetic algorithms and here is a collection of some of my own to solve various challenges. The most famous of which being the "Travelling Salesman" problem.</p>
+    <p class = "lead">I've chosen 3 sketches to embed that are polished, show a specific facet of game design, coding or my personal interest. If you wish to view some more that will not be nearly as polished or easily read please look beyond them to the thumbnails.</p>
   </div>
 <!--- Thumbnail Row section - Used to show responsive thumbnail tiles. --->
   <div class = "row">
@@ -71,8 +71,8 @@
           <h2 class="display-6" style="text-align:center;">Genetic Salesman</h2>
           <p>The travelling saleman problem 'solved' by using genetic algorithms and several hundred populations to achieve a shortest route.</p>
           <div class = "text-center">
-            <button type="button" class="btn btn-secondary">View Breakdown</button>
-            <button type="button" class="btn btn-secondary">View Code (External)</button>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/full/zLhK_ZdzF" role="button">View Fullscreen</a>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/sketches/zLhK_ZdzF" role="button">View Code</a>
           </div>
         </div>
       </div>
@@ -80,38 +80,41 @@
     <!-- Column 2 -->
     <div class = "col-lg-4">
       <div class="col-xs-12 text-center caption">
-        <iframe src="https://editor.p5js.org/Pseu/embed/fGsuXOIyP"></iframe>
+        <iframe src="https://editor.p5js.org/Pseu/embed/WMVMtVolG"></iframe>
       </div>
       <div class="thumbnail text-center caption">
         <div class="caption">
-          <h2 class="display-6" style="text-align:center;">N-Sided Ships</h2>
-          <p>Each ship is an N-sided shape. Each side can emit a static force, like a thruster. Using genetic algorithms watch ships navigate to a point on the canvas over generations.</p>
+          <h2 class="display-6" style="text-align:center;">Pendulums</h2>
+          <p>A classic example of minor changes in initial conditions creating dramatic differences in outcomes. Set the start angle to 180. The difference is then the amount of degrees the pendulums can possibly spawn between (Default is 1, so values between 179 and 181). Pendulums with more than 3 nodes (Center counts as a node) will have wildly different results. Damping and gravity are arbitrary.</p>
           <div class = "text-center">
-            <button type="button" class="btn btn-secondary">View Breakdown</button>
-            <button type="button" class="btn btn-secondary" href="https://editor.p5js.org/Pseu/sketches/zLhK_ZdzF">View Code (External)</button>
+            <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/full/WMVMtVolG" role="button">View Fullscreen</a>
+            <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/sketches/WMVMtVolG" role="button">View Code</a>
           </div>
         </div>
       </div>
     </div>
     <!-- Column 3 -->
     <div class = "col-lg-4">
+      <div class="col-xs-12 text-center caption">
+        <iframe src="https://editor.p5js.org/Pseu/embed/ANsGTjtZA"></iframe>
+      </div>
       <div class="thumbnail text-center">
         <div class="caption">
-          <h2 class="display-6" style="text-align:center;">Genetic Walkers</h2>
-          <p>A walker is a circle which has two circles as 'arms'. A walker can move by rotating around it's left or right arm an amount each frame. Watch them race to the end of the canvas.</p>
+          <h2 class="display-6" style="text-align:center;">Flocking Algorithm</h2>
+          <p>Flocking algorithms first made by Craig Reynolds in 1987 they are agents with very simple rules that create realistic 'flocking' behaviour examined in the real world with animals such as birds or fish. I have included some parameters to create different results and display information. I'd stay away from the debug button on mobiles.</p>
           <div class = "text-center">
-            <button type="button" class="btn btn-secondary">View Breakdown</button>
-            <button type="button" class="btn btn-secondary">View Code (External)</button>
+            <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/full/ANsGTjtZA" role="button">View Fullscreen</a>
+            <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/sketches/ANsGTjtZA" role="button">View Code</a>
           </div>
         </div>
       </div>
     </div>
-
+  </div>
 <!-- Jumbotron section to announce the next series of thumbnails.-->
   <div class = "jumbotron title_bar">
-    <h1 class = "display-6">Perlin Noise</h1>
+    <h1 class = "display-6">The Rest</h1>
     <hr class="my-4">
-    <p class = "lead">Perlin noise has a similar fascination for me, creating something interesting and robust from calculated "randomness". Here I've included a few examples of using it to create maps, interesting drawings or create complex but repeatable behaviour.</p>
+    <p class = "lead">Rather than embed everything the rest are thumbnails of what to expect and short descriptions of what is going on. The code quality can vary wildly. As you will see they are all sketches with a single idea usually to understand a concept better. Most will be a default size and not be built for mobiles.</p>
   </div>
 
 <!--- Thumbnail Row section - Used to show responsive thumbnail tiles. --->
@@ -119,15 +122,13 @@
     <!-- Column 1 -->
     <div class = "col-lg-4">
       <div class="thumbnail">
-        <a href="./space_game_breakdown.html">
-          <img class = "card-img-top thumb_images" src="../images/lights.jpg" alt="Travelling Salesman Thumbnail" style="width:100%; ">
-        </a>
+        <img class = "card-img-top thumb_images" src="../images/p5_screens/conway.jpg" alt="Conway's Game of Life Thumbnail" style="width:100%; ">
           <div class="caption">
-            <h2 style="text-align: center">P Noise 1</h2>
-            <p>Here I will write an accurate description.</p>
+            <h2 style="text-align: center">Game of Life</h2>
+            <p>This is a quick and dirty version of Conways Game of Life. For a shader powered version please see the Game Design page. Random seed, refresh to change it.</p>
             <div class = "text-center">
-              <button type="button" class="btn btn-secondary" >View Breakdown</button>
-              <button type="button" class="btn btn-secondary" >View Code</button>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/present/G2Cotprc-" role="button">View Sketch</a>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/sketches/G2Cotprc-" role="button">View Code</a>
             </div>
           </div>
       </div>
@@ -135,15 +136,13 @@
     <!-- Column 2 -->
     <div class = "col-lg-4">
       <div class="thumbnail">
-        <a href="#blank_sketch_piece.html">
-          <img class = "thumb_images" src="../images/lights.jpg" alt="WRONG THUMBNAIL" style="width:100%;">
-        </a>
+          <img class = "thumb_images" src="../images/p5_screens/flow_field.jpg" alt="Flow Field Thumbnail" style="width:100%;">
           <div class="caption">
-            <h2 style="text-align: center">P Noise 2</h2>
-            <p>Here I will write an accurate description</p>
+            <h2 style="text-align: center">Flow Field</h2>
+            <p>This is a flow field created using perlin noise for adjustable parameters. I suggest turning gravity up and hitting "Apply" a bunch to see. Mousclicks also add particles.</p>
             <div class = "text-center">
-              <button type="button" class="btn btn-secondary" >View Breakdown</button>
-              <button type="button" class="btn btn-secondary" >View Code</button>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/present/QaILU0I5x" role="button">View Sketch</a>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/sketches/QaILU0I5x" role="button">View Code</a>
             </div>
           </div>
       </div>
@@ -152,77 +151,20 @@
     <div class = "col-lg-4">
       <div class="thumbnail">
         <a href="./images/lights.jpg">
-          <img class = "thumb_images" src="../images/lights.jpg" alt="Lights" style="width:100%">
+          <img class = "thumb_images" src="../images/p5_screens/perlin_noise_chunks.jpg" alt="Perlin Noise Chunks Thumbnail" style="width:100%">
         </a>
           <div class="caption">
-            <h2 style="text-align: center">P Noise 3</h2>
-            <p>Here I will put an accurate description.</p>
+            <h2 style="text-align: center">Perlin Noise 'Chunks'</h2>
+            <p>A very simple 3 color map. Move East/West with arrows Left/Right Arrows. Up and down actually controls the Z value of the noise, essentially showing 'Depth' such as used in Dwarf Fortress for instance; you aren't moving north/south, you're moving up/down.</p>
             <div class = "text-center">
-              <button type="button" class="btn btn-secondary" >View Breakdown</button>
-              <button type="button" class="btn btn-secondary" >View Code</button>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/present/O5FRGKIrg" role="button">View Sketch</a>
+              <a class="btn btn-secondary" target="_blank" href="https://editor.p5js.org/Pseu/sketches/O5FRGKIrg" role="button">View Code</a>
             </div>
           </div>
       </div>
     </div>
   </div>
-  <!-- Jumbotron section to announce the next series of thumbnails.-->
-    <div class = "jumbotron title_bar">
-      <h1 class = "display-6">Galaxy / Physics</h1>
-      <hr class="my-4">
-      <p class = "lead">Obviously game engines have physics engines built into them and even JS has libraries such as matter.js, physics.js etc. However coding it in this way I feel a better understanding of the fundamentals.</p>
-    </div>
-
-  <!--- Thumbnail Row section - Used to show responsive thumbnail tiles. --->
-    <div class = "row thumb_row">
-      <!-- Column 1 -->
-      <div class = "col-lg-4">
-        <div class="thumbnail">
-          <a href="./space_game_breakdown.html">
-            <img class = "card-img-top thumb_images" src="../images/lights.jpg" alt="Travelling Salesman Thumbnail" style="width:100%; ">
-          </a>
-            <div class="caption">
-              <h2 style="text-align: center">Galaxy Stuff 1</h2>
-              <p>Here I will write an accurate description.</p>
-              <div class = "text-center">
-                <button type="button" class="btn btn-secondary" >View Breakdown</button>
-                <button type="button" class="btn btn-secondary" >View Code</button>
-              </div>
-            </div>
-        </div>
-      </div>
-      <!-- Column 2 -->
-      <div class = "col-lg-4">
-        <div class="thumbnail">
-          <a href="#blank_sketch_piece.html">
-            <img class = "thumb_images" src="../images/lights.jpg" alt="WRONG THUMBNAIL" style="width:100%;">
-          </a>
-            <div class="caption">
-              <h2 style="text-align: center">Galaxy Stuff 2</h2>
-              <p>Here I will write an accurate description.</p>
-              <div class = "text-center">
-                <button type="button" class="btn btn-secondary">View Breakdown</button>
-                <button type="button" class="btn btn-secondary">View Code</button>
-              </div>
-            </div>
-        </div>
-      </div>
-      <!-- Column 3 -->
-      <div class = "col-lg-4">
-        <div class="thumbnail">
-          <a href="./images/lights.jpg">
-            <img class = "thumb_images" src="../images/lights.jpg" alt="Lights" style="width:100%">
-          </a>
-            <div class="caption">
-              <h2 style="text-align: center">Galaxy Stuff 3</h2>
-              <p>Here I will write an accurate description.</p>
-              <div class = "text-center">
-                <button type="button" class="btn btn-secondary" >View Breakdown</button>
-                <button type="button" class="btn btn-secondary" >View Code</button>
-              </div>
-            </div>
-        </div>
-      </div>
-    </div>
+</div>
 </div>
 <!-- Necessary script for bootstrap collapse feature-->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
