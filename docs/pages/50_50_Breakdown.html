@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<!-- Navbar and it's related contents -->
+<nav class="navbar navbar-expand-md fixed-top bg-dark navbar-dark " id = "followme">
+  <!-- Brand -->
+  <a class="navbar-brand" href="../index.html" style="padding-left: 20px">Home</a>
+  <!-- Toggler/collapsibe Button -->
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" style="margin-right: 20px">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <!-- Navbar links -->
+  <div class="collapse navbar-collapse" id="collapsibleNavbar" style="padding-left:40px;">
+    <ul class="navbar-nav">
+      <li class="nav-item" style="border-right: 1px solid slategrey">
+        <a class="nav-link active" href="./game_design.html">Game Design</a>
+      </li>
+      <li class="nav-item" style="border-right: 1px solid slategrey">
+        <a class="nav-link" href="#">Javascript / Web</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Art / Animation</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<div class = "container" style="margin-top: 40px">
+<!--- Title bar section - displayed on all pages. --->
+  <div class = "row title_bar">
+    <div class = "jumbotron">
+      <h1 class = "display-4">Fifty Fifty</h1>
+      <hr class="my-4">
+      <p class = "lead"> A game to simulate life and various events. While the 'game' is simply a few buttons the main focus is building a customizable editor to handle easy creation and handling of Scriptable Objects.</p>
+    </div>
+  </div>
+
+<!-- Overview and Goals -->
+  <div class = "col-md-12">
+    <div class="thumbnail">
+        <div class="caption">
+          <h2>Overview and Goals:</h2>
+          <p>
+            Create simple editor modules capable of loading and unloading each other as well as handling saving and loading of 'Scriptable Objects'. Editor should be intuitive and allow mass creation easily.
+          </p>
+          <p>
+            Finally create a large pool of events that the player could potentially come into contact with and filter that pool by what the character has been doing recently, what skills they have etc.
+          </p>
+          <p>
+            The 'Game' portion itself would play very similarly to BitLife or other 'Life Simulation' games that use a text adventure style.
+          </p>
+        </div>
+    </div>
+  </div>
+  <!-- Player Character -->
+  <div class = "row">
+    <div class = "col-md-6">
+      <div class="thumbnail">
+        <a href = "../images/5050_screens/50_50Builders_Blank.png">
+          <img class = "thumb_images card-img-top" src="../images/5050_screens/50_50Builders_Blank.png" alt="Games Design Thumbnail" style="margin-left: auto; text-align: center;">
+        </a>
+      </div>
+      <div class="thumbnail">
+        <a href = "../images/5050_screens/50_50Builders_Example.png">
+          <img class = "thumb_images card-img-top" src="../images/5050_screens/50_50Builders_Example.png" alt="Games Design Thumbnail" style="margin-left: auto; text-align: center;">
+        </a>
+      </div>
+    </div>
+    <div class = "col-md-6">
+      <div class = "thumbnail">
+          <div class="caption">
+            <h2>Editor Modules:</h2>
+            <p>
+              Above is the blank editor modules, these are used to create the pool of events. 'Events' and 'Questions' are synonymous.
+            </p>
+            <p>
+              <h4>Answer Builder</h4>
+              Answers are possible ways the player can respond to a given question. They can include their own requirements, however many are blanket responses to situations.
+            </p>
+            <p>
+              Requirements allow personalisation, such as high strength characters being able to fight their way out of situations; simply add a requirement that a character must have x strength.
+            </p>
+            <p>
+              Answers can also require contacts, items, or previous events. This allows chaining for storylines to emerge organically through gameplay; but given direction so they can recieve proper polish.
+            </p>
+            <p>
+              <h4>Question Builder</h4>
+              Questions are the situations the player can get into. These can be as wide ranging as one wishes. Requirements are how the player is limited from seeing questions, this is so that a baby cannot be given an event to buy a house, for example.
+            </p>
+            <p>
+              Questions must feature at least 2 responses which have equal or lower requirements than the actual question; this is to prevent the player recieving answers they shouldn't be able to perform. All of this is handled in the back end so the designer doesn't have to worry about it.
+            </p>
+            <p>
+              Questions however can include as many answers as they want after these two with any requirements; these will then be compared with the player if they recieve the event and be added into the pool if the player passes.
+            </p>
+            <p>
+              Currently questions will only display 2 of the answers out of the questions however this could be easily expanded to n amount or to all the player passes.
+            </p>
+            <p>
+              <h4>Requirements Builder</h4>
+              This is the core of how all the pooling works and how a player is navigated through the world by their choices. Requirements include things such as Contacts (People they need to have met), Items (Items they must have acquirred) as well as other events (Questions), including answers to those questions (So the player has to recieve a question and respond in a certain way).
+            </p>
+            <p>
+              Not featured on the screenshot is ways of searching through items and contacts by age or description. Finally a picture is worth a thousand words so here is a filled in screenshot.
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-6">
+      <div class="thumbnail">
+        <a href = "../images/5050_screens/50_50Builders_Example.png">
+          <img class = "thumb_images card-img-top" src="../images/5050_screens/50_50Builders_Example.png" alt="Games Design Thumbnail" style="margin-left: auto; text-align: center;">
+        </a>
+      </div>
+    </div>
+    <div class = "col-md-6">
+      <div class = "thumbnail">
+          <div class="caption">
+            <h2>Code Snippets (Github)</h2>
+            <div class = "text-center">
+                <a class="btn btn-secondary" target="_blank" href="https://github.com/TomDraper/Profile/tree/master/docs/code_snippets/Requirements.cs" role="button">Requirements Object</a></p>
+                <a class="btn btn-secondary" target="_blank" href="https://github.com/TomDraper/Profile/tree/master/docs/code_snippets/Requirements_Builder.cs" role="button">Requirements Builder</a></p>
+                <a class="btn btn-secondary" target="_blank" href="https://github.com/TomDraper/Profile/tree/master/docs/code_snippets/EditorModules.cs" role="button">Editor Window</a>
+            </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  <div class = "row">
+    <div class = "col-md-12">
+      <div class = "thumbnail">
+          <div class="caption">
+            <h2>Next Steps:</h2>
+            Actually use the tools I made... A small UI was created for the game but mostly I have been working with a basic object that I change to debug and test. I created a lot for this project but eventually felt like I created so much it deserved to be used for something else. It also happened that ECS came out around this time, I learnt of BitLife which was a very similar idea, I was disheartened and lost interest in the project.
+            <p>
+              In loading up the project again though I discovered everything still works and therefore if I wished this project could continue.
+            </p>
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Necessary script for bootstrap collapse feature-->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+</body>
+</html>
