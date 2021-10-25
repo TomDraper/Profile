@@ -50,7 +50,7 @@
             The goal was to create a simple system to organise spawning of assets so that the designer can quickly understand what is happening in a scene, as well as be able to change up timings, sound effects, etc. without digging through resource files or spending time finding correct files within the file explorer.
           </p>
           <p>
-            With this goal in mind I set up a very simple player which rotates when still and the player can click to add a linear velocity in the direction it faces. They exist surrounded by collision boxes that reflect their velocity back (Bounce-off the walls), and spawners are added above the scene with timings specified as they are needed.
+            With this goal in mind I set up a very simple player which rotates when still and the player can click to add a linear velocity in the direction it faces. They exist surrounded by collision boxes that reflect their velocity back (bounce-off the walls), and spawners are added above the scene with timings specified as they are needed.
             </p>
         </div>
     </div>
@@ -67,7 +67,7 @@
           <div class="caption">
             <h2>Player Character:</h2>
             <p>
-              The player character is the simplest object. The player can stop and start movement, the character points in a direction and will go in that direction. There is some lerping between a max rotation and speed and it has a signal (Godot's version of a callback), to reflect it's velocity when it hits a wall.
+              The player character is the simplest object. The player can stop and start movement, the character points in a direction and will go in that direction. There is some lerping between a max rotation and speed and it has a signal (Godot's version of a callback), to reflect its velocity when it hits a wall.
             </p>
           </div>
       </div>
@@ -130,7 +130,7 @@
             <h2>Next Steps:</h2>
 
             <p>I am currently working on a way to condense several of these spawner files into one resource that can be loaded into each level, currently if the designer imports the sequence above it would show 3 spawners. I want one spawner with variables to change all children.</p>
-            <p>Currently spawners have instanced resource files on them, which makes them unique to each one. This is fine for editing levels because things change regularly however they currently only exist in the memory of the editor and would be incorrectly exported for release. This is simple to fix (Providing you know it's going to be a problem) and is actually key to my design as I plan to export the previously mentioned sequences <b>only</b>, the spawners are just for the designers. This saves the eventual file size of the game and prevents the file system getting overloaded with minorly changed files (Tree0001.tscn, Tree0002.tscn...).
+            <p>Currently spawners have instanced resource files on them, which makes them unique to each one. This is fine for editing levels because things change regularly however they currently only exist in the memory of the editor and would be incorrectly exported for release. This is simple to fix (providing you know it's going to be a problem) and is actually key to my design as I plan to export the previously mentioned sequences <b>only</b>, the spawners are just for the designers. This saves the eventual file size of the game and prevents the file system getting overloaded with minorly changed files (Tree0001.tscn, Tree0002.tscn...).
             </p>
           </div>
       </div>

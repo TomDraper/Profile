@@ -37,7 +37,7 @@
     <div class = "jumbotron">
       <h1 class = "display-4">Perlin Noise Terrain</h1>
       <hr class="my-4">
-      <p class = "lead"> Generating terrain using perlin noise and a shader to colour heightmaps; including collisions, pathfinding and pawns. Done as a reasonable introduction to ECS systems.</p>
+      <p class = "lead"> Generating terrain using perlin noise and a shader to colour heightmaps, including collisions, pathfinding and pawns. Created as a reasonable introduction to ECS systems.</p>
     </div>
   </div>
 
@@ -50,7 +50,7 @@
             Generate interesting base terrain that can be highly modifiable for multiple use cases. This terrain could later be used as the base for a structured level or for further generation of procedural elements.
           </p>
           <p>
-            This was done as an introduction to ECS for myself and I was more interested in working with the ECS system and discovering ways I could use it and implement it into future projects. As such the actual core code of this project is very simple; simple pathfinding, spawning of pawns, and the 'landing' of a 'Ruler' is all it does.
+            This was done as an introduction to ECS for myself and I was more interested in working with the ECS system and discovering ways I could use it and implement it into future projects. As such the actual core code of this project is very simple; simple pathfinding, spawning of pawns, the 'landing' of a 'Ruler', and arbitrary resources attached to each node.
           </p>
         </div>
     </div>
@@ -94,13 +94,13 @@
           <div class="caption">
             <h2>Perlin Noise:</h2>
             <p>
-              I love perlin noise. These are just screenshots of a 2D heightmap generated based on the parameters put in. Most interesting is probably the shader that blends the colours between heights allowing seperation of sea, sand, land, mountain, or any other type of land.
+              I love perlin noise. These are screenshots of a 2D heightmap generated based on the parameters put in. Most interesting is probably the shader that blends the colours between heights allowing separation of sea, sand, land, mountain, or any other type of land.
             </p>
             <p>
-              There is a Ruler that chooses a nearby node and lands there, plants their flag and then begins collecting resources from nodes. All of this is occuring off screen in the Entity Debugger.
+              There is a Ruler that chooses a nearby node and lands there, plants their flag and then begins collecting resources from nodes. All of this is occuring off-screen in the Entity Debugger.
             </p>
             <p>
-              This project is incredibly unimpressive for what I could achieve with the knowledge I have now, but it did form as a brilliant introduction to ECS and how to think of Systems vs Objects and the different approaches you must take for each.
+              This project is perhaps unimpressive for what I could achieve with the knowledge I have now, but it did serve as a brilliant introduction to ECS and how to think with Systems vs Objects or if you prefer, Functional vs Object-Orientated programming and the different approaches you must take for each.
             </p>
           </div>
       </div>
@@ -125,7 +125,7 @@
               To that end if I were to continue the terrain generation I would add biomes by using a seperate heightmap overlayed, include some sort of object pass in the generation to provide trees, rocks, etc. I would also code in something to walk around rather than static cameras which is what it is now.
             </p>
             <p>
-              And if I were to continue it really far adding elements such as an erosion simulation, temperature map, pressure map or flooding could also help to push the model to higher levels of realism. That being said I'm pretty sure in doing so you would lose a lot of the benefits of the ECS architecture, namely; speed.
+              And if I were to continue it really far adding elements such as an erosion simulation, temperature map, pressure map or flooding could also help to push the model to higher levels of realism. That being said I'm pretty sure in doing so you would lose a lot of the benefits of the ECS architecture, namely speed.
             </p>
           </div>
       </div>
