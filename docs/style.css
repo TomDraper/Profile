@@ -19,7 +19,11 @@
 .caption {
   padding: 10px 10px 10px;
 }
-
+.shader_embed {
+  scrolling: "no";
+  width: 400px;
+  height: 400px;
+}
 iframe {
   scrolling: "no";
   width: 100%;
@@ -30,6 +34,7 @@ iframe {
 body {
   background-color: darkgrey;
 }
+
 @media (min-width: 640px){
 }
 
@@ -37,12 +42,7 @@ body {
 }
 
 @media (min-width: 1024px){
-
-
-
 }
 
 @media (min-width: 1200px){
-
-
 }
