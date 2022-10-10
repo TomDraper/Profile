@@ -1,48 +1,80 @@
-.caption{
-  text-align: justify;
-  padding: 10px 5px 5px;
+.caption {
+    text-align: justify;
+    padding: 0px 20px;
 }
 
-.thumbnail{
-  margin-top: 10px;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 10px;
-  background-color: white;
+.captionBtn {
+    text-align: center;
+    margin: 10px;
+    padding: 10px 10px;
 }
+.jumbotron {
+    padding-top: 20px;
+}
+
+.fullSpan {
+    text-align: left;
+    padding: 20px;
+}
+.canvasDiv {
+    height:100%;
+    align-content: center;
+    align-items: center;
+    align-self: center;
+    text-align: center;
+    vertical-align: center;
+}
+
+.chartDiv {
+    width: 600px;
+    padding-left: 0;
+    margin-left: 0;
+    align-content: flex-start;
+    align-items: flex-start;
+    align-self: center;
+}
+
+.thumbnail {
+    margin-top: 10px;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 10px;
+    background-color: white;
+}
+
 .thumb_images {
-  border-radius: 8px;
+    border-radius: 8px;
 }
-.title_bar{
-  padding-top: 30px;
+.sketchThumb {
+    padding-top: 10px
 }
-.caption {
-  padding: 10px 10px 10px;
+
+.thumbTitle {
+    text-align: center;
+    padding: 10px 0px 0px 0px;
 }
+
 .shader_embed {
-  scrolling: "no";
-  width: 400px;
-  height: 400px;
+    scrolling: "no";
+    width: 400px;
+    height: 400px;
 }
+
 iframe {
-  scrolling: "no";
-  width: 100%;
-  height: 500px;
-  border: 1px solid black;
+    scrolling: "no";
+    width: 100%;
+    height: 500px;
+    border: 1px solid black;
 }
 
 body {
-  background-color: darkgrey;
+    background-color: darkgrey;
 }
 
-@media (min-width: 640px){
-}
+@media (min-width: 640px) {}
 
-@media (min-width: 768px){
-}
+@media (min-width: 768px) {}
 
-@media (min-width: 1024px){
-}
+@media (min-width: 1024px) {}
 
-@media (min-width: 1200px){
-}
+@media (min-width: 1200px) {}
