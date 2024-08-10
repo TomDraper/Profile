@@ -21,6 +21,20 @@ const fullSpanEntry = <FullSpanExplanation title="Tools of the Trade" entries={t
 // Each thumbnail that is on the page and their information.
 const thumbnailObjects = [
     {
+        title: "Luminous VR", 
+        alt: "Luminous", 
+        src: "../images/LuminousLogo.png", 
+        link:"./luminous.html",
+        description: "Working within the XR sector to deliver excellent training tools as well as interactable environments within VR/MR/AR environments. This is an end-to-end solution where I touched on most places at various times."
+    },
+    {
+        title: "Sprung Studios", 
+        alt: "Sprung", 
+        src: "../images/SprungStudiosLogo.png", 
+        link:"./sprung.html",
+        description: "Working on delivering professional, pixel-perfect UIs that are performant and reactive."
+    },
+    {
         title: "Godot - Space Game", 
         alt: "Godot", 
         src: "../images/space_game_screens/space_game_pc_gif.gif", 

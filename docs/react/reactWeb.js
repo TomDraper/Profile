@@ -13,8 +13,10 @@ const toolsOfTheTradeEntry = <>
     <i>Web Specific Languages: HTML/CSS/JS, Typescript, React, Bootstrap</i>
     
     <p><b>P5 Editor</b> is a quick to access browser based text editor with some common and easy-to-use libraries for vectors and shape drawing already included, namely the p5 library. </p>
+        
+    <p><b>React</b> powers this website (Mostly). </p>
 
-    <p><b>Brackets</b> has become my new text editor (Used to transfer to React), due to <b>Atom</b>'s retirement. <b>Visual Studio</b> is also what I fall back to occasionally.</p>
+    <p><b>IDEs</b> used a few. Latest has been Phoenix, also use brackets, VS Code, VS Editor and Atom.</p>
     
     <p><b>Glitch</b> for Node and server stuff.</p>
 </>

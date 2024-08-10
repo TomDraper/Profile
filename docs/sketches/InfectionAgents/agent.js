@@ -1,8 +1,6 @@
 const walkingInfectRadius = 30;
 const immunityCooldown = 10;
 const recoverSpeed = 0.01;
-const sicknessSpeed = 0.005;
-const quarantineLevel = 0.3;
 
 const AgentStates = {
     home: 0,
@@ -72,13 +70,13 @@ class Agent {
     }
 
     isAtWork() {
-        if (dist(this.pos.x, this.pos.y, this.workPos.x, this.workPos.y) < agentSpeed) {
+        if (dist(this.pos.x, this.pos.y, this.workPos.x, this.workPos.y) < 1) {
             return true;
         }
         return false;
     }
     isAtHome() {
-        if (dist(this.pos.x, this.pos.y, this.homePos.x, this.homePos.y) < agentSpeed) {
+        if (dist(this.pos.x, this.pos.y, this.homePos.x, this.homePos.y) < 1) {
             return true;
         }
         return false;
@@ -136,7 +134,7 @@ class Agent {
         }
         let dir = p5.Vector.sub(this.workPos, this.pos);
         //dir.normalize();
-        dir.setMag(agentSpeed);
+        dir.setMag(min(agentSpeed, dir.mag()));
         this.pos.add(dir);
 
         for (let other of agents) {
@@ -163,7 +161,7 @@ class Agent {
             return;
         }
         let dir = p5.Vector.sub(this.homePos, this.pos);
-        dir.setMag(agentSpeed);
+        dir.setMag(min(agentSpeed, dir.mag()));
         //dir.normalize();
         this.pos.add(dir);
         for (let other of agents) {

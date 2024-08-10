@@ -1,18 +1,20 @@
 const homes = [];
 const workplaces = [];
 
-const homeAmount = 40;
-const maxFamilySize = 3;
+const homeAmount = 20;
+const maxFamilySize = 5;
 
-const workAmount = 15;
+const workAmount = 5;
 
 const agents = []
 
-const agentAmount = 20;
+const agentAmount = 50;
 
 let currentTime = 0;
 let currentDay = 0;
-const secondsInDay = 24;
+const secondsInDay = 10;
+const sicknessSpeed = 0.005 * (24 / secondsInDay);
+const quarantineLevel = 0.3 * (24 / secondsInDay);
 const agentSpeed = 5 * (24 / secondsInDay); 
 // A speed of 5 will mean it takes them roughly 1 second (1 hour simtime) @ 24 hours to get to work and back. 
 const workStart = 8 * (secondsInDay / 24);
@@ -23,7 +25,7 @@ function setup() {
     canvas.parent("canvasDiv");
     
     textAlign(CENTER, CENTER)
-    let homeSize = createVector(50, 5);
+    let homeSize = createVector(10, 10);
     let workSize = createVector(50, 20);
     for (let y = 1; y <= homeAmount; y++) {
         homes.push(new Home(10, y / (homeAmount + 1) * height, homeSize))
