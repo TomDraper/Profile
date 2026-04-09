@@ -50,6 +50,40 @@
     --small-box-width: 300px;
 }
 
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeWhenInView {}
+
+.fadeIn {
+    animation: fade-in 1s;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut {
+    animation: fade-out 1s;
+    animation-fill-mode: forwards;
+}
+
+.hidden {
+    opacity: 0;
+}
+
 html, body {
     width: 100%;
     max-width: 100%;
@@ -352,11 +386,10 @@ button {
 
 .pageIntroSideImage {
     float: right;
-    margin-top: 1rem;
     margin-left: 1rem;
     display: flex;
     justify-self: flex-end;
-    width: min(500px, 100%);
+    width: min(400px, 100%);
     aspect-ratio: auto 16/9;
     border-radius: var(--button-radius);
 }
@@ -669,14 +702,15 @@ button {
 
 
 .smallBoxGrid {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, var(--small-box-width));
     gap: 1rem;
-    justify-content: space-between;
 }
 
 .smallBox {
+    width: min(300px, 50%);
     border: 1px var(--border-grey) solid;
     border-radius: var(--button-radius);
     background-color: var(--secondary-background-color);
