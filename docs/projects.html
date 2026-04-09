@@ -27,76 +27,329 @@
 
     <div class="pageIntro">
         <h1 class="greenText">My Projects</h1>
-        <p>A selection of the projects I have worked on in my professional life as well as my personal time.</p>
+        <div class="paragraphBlock">
+            <p>A selection of the projects I have worked on in my professional life as well as my personal time.</p>
+            <p>Clicking on any of the projects will give you a more detailed overview.</p>
+            <p>Each section is either a company or platform and each project is tagged so you can quickly filter by what you are interested in.</p>
+        </div>
     </div>
 
-    <div class="boxSection">
-        <div class="largeBoxGrid">
-            <div class="largeBox">
-                <img src="images/lights.jpg"/>
-                <h3>Automated Localization</h3>
-                <p>Created tooling to automatically translate any projects we made using Google Translate API. It would then also create voiced lines using Google Text-To-Speech API and put the output text or audio where it needed to be to work in game.</p>
-                <p>Supported SSML and had a number of custom 'tags' that developers could use to change how words were pronounced, silence sections, say things not directly in the text etc.</p>
-                <div class="tagBox">
-                    <p>Luminous</p>
-                    <p>Unity Editor</p>
-                    <p>Localization</p>
-                    <p>Google API</p>
-                    <p>TTS</p>
-                    <p>Automated</p>
+    <div class="largeBoxSection">
+        <h1 class="greenText">Luminous</h1>
+        <p>Company based around creating VR/XR training modules for industry. Main job was editor tooling and maintaining tools already used for development, but I did also create modules and lead several projects; particularly ones that were more custom and not based around things we had previously done. A key thing I also made was a desktop controller so that any VR project we made could also be played on PC - Adding a marketable feature and reducing the testing time for developers dramatically.</p>
+        <div class="largeBoxCarousel luminousAnchor">
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/StockPhotos/Globe.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>Automated Localization</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>Created tooling to automatically translate any projects we made using Google Translate API. It would then also create voiced lines using Google Text-To-Speech API and put the output text or audio where it needed to be to work in game.</p>
+                        <p>Supported SSML and had a number of custom 'tags' that developers could use to change how words were pronounced, silence sections, say things not directly in the text etc.</p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Luminous</p>
+                        <p>Unity Editor</p>
+                        <p>Localization</p>
+                        <p>Google API</p>
+                        <p>TTS</p>
+                        <p>Automated</p>
+                    </div>
                 </div>
             </div>
-            <div class="largeBox">
-                <img src="images/lights.jpg"/>
-                <h3>Flow System</h3>
-                <p>Worked on the Luminous 'Flow' system which was a (mostly) internal tool we used to quickly develop VR and XR scenarios using a graph system similar to that of Blueprints in Unreal Engine.</p>
-                <p>I maintained, updated and created a number of additional nodes that people could use as well as did an optimization pass to add and improve support for copy/paste, undo/redo, grouping and multiple pathing.</p>
-                <div class="tagBox">
-                    <p>Luminous</p>
-                    <p>Graph System</p>
-                    <p>Editor Tool</p>
-                    <p>Speed Development</p>
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>Flow System</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>Worked on the Luminous 'Flow' system which was a (mostly) internal tool we used to quickly develop VR and XR scenarios using a graph system similar to that of Blueprints in Unreal Engine.</p>
+                        <p>I maintained, updated and created a number of additional nodes that people could use as well as did an optimization pass to add and improve support for copy/paste, undo/redo, grouping and multiple pathing.</p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Luminous</p>
+                        <p>Graph System</p>
+                        <p>Editor Tool</p>
+                        <p>Speed Development</p>
+                    </div>
                 </div>
             </div>
-            <div class="largeBox">
-                <img src="images/lights.jpg"/>
-                <h3>Web GL</h3>
-                <p>Created a custom WebGL "Quiz" game which used a number of custom tools and features. 14 full 3D environments, supported 10 question types, had a 3D character to walk around the environments and find question points, a driving level to traverse between environments and two minigames that players could participate in for additional points.</p>
-                <p>At its core was an editor - Accessed via a web portal - where an admin could add/update/remove questions. This would then be reflected into the Web Game where users would go through and attempt to get as many questions correct as they could.</p>
-                <p>A number of different question templates were created including fill-in-the-blank, identify places on an image and rearrange images into the correct order.</p>
-                <p>The main challenge of the game was handling, updating and maintaining the different types of questions that we needed as well as keeping the game performant/low disk space as it needed to be accessed online by people potentially running low-end hardware.</p> 
-                <div class="tagBox">
-                    <p>Luminous</p>
-                    <p>Adnoc</p>
-                    <p>WebGL</p>
-                    <p>Data Structures</p>
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>Web GL</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>Created a custom WebGL "Quiz" game which used a number of custom tools and features. 14 full 3D environments, supported 10 question types, had a 3D character to walk around the environments and find question points, a driving level to traverse between environments and two minigames that players could participate in for additional points.</p>
+                        <p>At its core was an editor - Accessed via a web portal - where an admin could add/update/remove questions. This would then be reflected into the Web Game where users would go through and attempt to get as many questions correct as they could.</p>
+                        <p>A number of different question templates were created including fill-in-the-blank, identify places on an image and rearrange images into the correct order.</p>
+                        <p>The main challenge of the game was handling, updating and maintaining the different types of questions that we needed as well as keeping the game performant/low disk space as it needed to be accessed online by people potentially running low-end hardware.</p> 
+                    </div>
+                    <div class="tagBox">
+                        <p>Luminous</p>
+                        <p>Adnoc</p>
+                        <p>WebGL</p>
+                        <p>Data Structures</p>
+                    </div>
                 </div>
             </div>
-            <div class="largeBox">
-                <img src="images/lights.jpg"/>
-                <h3>XR Training</h3>
-                <p>Throughout working with Luminous I was tasked with creating training modules which was the bread and butter of the company.</p>
-                <p>This involved working within the "Flow System" - described above - as well as occasionally writing custom functionality for things outside of it's scope.</p>
-                <p>While I did work on and complete a number of modules myself, more often I was tasked with tooling and enabling other developers to work faster, or automate as much of the process as I could, bringing the average turn around of a module (Blank slate -> Viable Product) from a few months to a few days.</p>
-                <div class="tagBox">
-                    <p>Luminous</p>
-                    <p>VR</p>
-                    <p>XR</p>
-                    <p>Training Modules</p>
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>XR Training</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>Throughout working with Luminous I was tasked with creating training modules which was the bread and butter of the company.</p>
+                        <p>This involved working within the "Flow System" - described in a previous section - as well as occasionally writing custom functionality for things outside of it's scope.</p>
+                        <p>While I did work on and complete a number of modules myself, more often I was tasked with tooling and enabling other developers to work faster, or automate as much of the process as I could, bringing the average turn around of a module (Blank slate -> Viable Product) from a few months to a few days.</p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Luminous</p>
+                        <p>VR</p>
+                        <p>XR</p>
+                        <p>Training Modules</p>
+                    </div>
                 </div>
             </div>
-            <div class="largeBox">
-                <img src="images/lights.jpg"/>
-                <h3>Standalone Training Simulator</h3>
-                <p>One of the final products I worked on was an interactive training simulator set on an oil rig. The idea being that there was a 'trainer' in one room who communicated to a room of 'trainees'. The trainer would set up a scenario, such as a fire on the rig, and the trainees would have to communicate what they would do in the situation. The trainer would then perform the actions they said and the simulator would show the trainees what would happen and whether it was the correct call or not.</p>
-                <p>The main challenges for this was working with several cameras at any time - There were 4 CCTV like views which would be displayed across 4 monitors to the trainees. As well as this, just about every scenario they wanted involved some sort of particle effect, which would then be displayed to four cameras. So performance became critical. Luckily they were working with a very powerful computer, but it still needed to be reigned in a number of times.</p>
-                <p>In addition to this I created a procedural sea with waves which items could float on top of and tried to create a semi-realistic effect for the boats on it. It also included some shader work to create a transparent effect, lerp towards a 'shallow' colour where the sea intersected objects and include spray and foam.</p>
-                <div class="tagBox">
-                    <p>Luminous</p>
-                    <p>Desktop</p>
-                    <p>Training</p>
-                    <p>Simulation</p>
-                    <p>Shader</p>
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>Standalone Training Simulator</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>One of the final products I worked on was an interactive training simulator set on an oil rig. The idea being that there was a 'trainer' in one room who communicated to a room of 'trainees'. The trainer would set up a scenario, such as a fire on the rig, and the trainees would have to communicate what they would do in the situation. The trainer would then perform the actions they said and the simulator would show the trainees what would happen and whether it was the correct call or not.</p>
+                        <p>The main challenges for this was working with several cameras at any time - There were 4 CCTV like views which would be displayed across 4 monitors to the trainees. As well as this, just about every scenario they wanted involved some sort of particle effect, which would then be displayed to four cameras. So performance became critical. Luckily they were working with a very powerful computer, but it still needed to be reigned in a number of times.</p>
+                        <p>In addition to this I created a procedural sea with waves which items could float on top of and tried to create a semi-realistic effect for the boats on it. It also included some shader work to create a transparent effect, lerp towards a 'shallow' colour where the sea intersected objects and include spray and foam.</p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Luminous</p>
+                        <p>Desktop</p>
+                        <p>Training</p>
+                        <p>Simulation</p>
+                        <p>Shader</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="greenText">Sprung Studios</h1>
+        <p>First company I worked for, focusing on pixel-perfect UI design and a strong emphasis on performant UI development. I mainly worked on a singular project developed using Unreal Engine covering many different areas of the game, but also helped and contributed to a number of projects during my employment.</p>
+        <div class="largeBoxCarousel sprungAnchor">
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>Junior to Developer</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>I began as a junior in Sprung, where I was creating prototypes of UIs for approval by more senior members and to transfer the skills I had in Unity over to Unreal. I actually got bumped up to a developer long before my time as a junior was due to end as I already understood the fundamentals and quickly adapted to the tools.</p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Sprung Studios</p>
+                        <p>Unreal Engine</p>
+                        <p>UI</p>
+                        <p>UX</p>
+                        <p>Game Development</p>
+                        <p>Perforce</p>
+                    </div>
+                </div>
+            </div>
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>Unreleased AAA MMORPG</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>My main project during my time there was implementing the UI for an upcoming MMORPG developed by Amazon. This included a number of different menus as well as some spatial work for healthbars, area indicators, damage reticles etc.</p>
+                        <p>Built in Unreal Engine it was my task to take what the designers had made, fill it with the information actually available in the game and then display it in a performant manner. The standard at Sprung are incredibly high and therefore anything that wasn't pixel-perfect, reactive to multiple resolutions, optimized and built to adapt for any future changes wouldn't pass the reviews. The work I produced there was of an exceptional quality.</p>
+                        <p>Sadly I believe the project got scrapped after my leaving (Probably unrelated) but it was extremely interesting and taught me a lot about how large and complex games are made. It also introduced me to Unreal Engines UI system, Perforce and Unit Testing.</p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Sprung Studios</p>
+                        <p>Unreal Engine</p>
+                        <p>UI</p>
+                        <p>UX</p>
+                        <p>Game Development</p>
+                        <p>Perforce</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h1 class="greenText">Web</h1>
+        <p>Over the years I've used HTML/CSS/JS for various things on the web. Here is a collection of some of them - Where they are still active I have tried to include links.</p>
+        <div class="largeBoxCarousel webAnchor">
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>Portfolio</h3>
+                    <div class="largeBoxScrollContent">
+                        <p>This is the latest itteration of my portfolio. I tend to design from scratch, and not use templates. While I'm not against their use I want to demonstrate that I have the skills to understand and work with things on the most basic of levels so that you can feel safe knowing that should a template or particular aspect of a library not work I will have the knowledge to adapt it or write it fresh.</p>
+                        <p>Currently this website does not use any modern libraries - It is purely HTML/CSS with very limited JS - However I will be transferring it over to react with time. My previous portfolio did use react and bootstrap and I've done some work with tailwind but not working on it with the same hours as I would a job I don't think my approach was fantastic - You can see how it was used in the history of the github repo.</p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Web</p>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                        <p>JS</p>
+                        <p>React</p>
+                    </div>
+                </div>
+            </div>
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>P5 General</h3>
+                    <div class="largeBoxScrollBanner">
+                        <h3><b>Any code here is built as a solo project!</b></h3>
+                        <p>It may therefore be uncommented and/or difficult to read. This isn't how I would write production-level code!</p>
+                    </div>
+                    <div class="largeBoxScrollContent">
+                        <p>P5 is something I've used for years. I appreciate that it's online, easily accessible, and rudimentary in what it is trying to achieve. Essentially a small graphics library for the web. It helps that The Coding Train youtube channel has a lot of tutorials which is what originally got me into using p5 and since then it has just been my go-to for quick things I want to check out.</p>
+                        <p>My entire library of sketches that I have written can be found <a href="https://editor.p5js.org/Pseu/sketches">HERE</a> but I have listed some of the more interesting or impressive ones below - There is a lot and a lot of them may be blank, boring or just not work.</p>
+                        
+                        <p>
+                            <a href="https://editor.p5js.org/Pseu/sketches/yIpPKbQ1R">Fireworks</a> - Made for my kids after November 5th so they can click and see some fireworks.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/1Y4IR3vx1">Spirograph Thing</a> - Working like a spirograph it creates a pattern using a path that is randomly selected on start. Hit Stop/Play to reset and get a new pattern.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/93WYKKYam">Matrix Style Text</a> - Falling text that is styled like the Matrix movie.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/U-ipOuaxQx">Plinko</a> - Runs a plinko game repeatedly and shows where each ball lands. Leave it for long enough and a standard distribution will appear.<br>
+                        </p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Web</p>
+                        <p>Javascript</p>
+                        <p>P5</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>P5 Genetic Algorithms</h3>
+                    <div class="largeBoxScrollBanner">
+                        <h3><b>Any code here is built as a solo project!</b></h3>
+                        <p>It may therefore be uncommented and/or difficult to read. This isn't how I would write production-level code!</p>
+                    </div>
+                    <div class="largeBoxScrollContent">
+                        <p>At some point I became really obsessed with genetic algorithms and wrote a few of my own to solve some simple problems. I also created a perceptron which is the basis of the neural networks that we see so much news about today.</p>
+
+                        <p>                     
+                            <a href="https://editor.p5js.org/Pseu/sketches/-_TQR2aEh">Genetic Gravity</a> - Calculates what acceleration you need from a position to get the most 'perfect' orbit using a genetic algorthim. Checking the checkbox will get rid of the visuals and just run the calculations, updating the best result over time.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/zLhK_ZdzF">Genetic Salesmen</a> - Classic travelling salesman problem but using genetic algorithm. Each person chooses a route, follows that route marking down the amount of steps the route took them and that is their fitness level at the end.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/9CX0E5h2p">Genetic Walker</a> - Uses a genetic algorithm to find a path from the top-left to the bottom-right of the canvas using Up/Down/Left/Right movements. Slider will speed up the simulation. After sim has finished time is paused so you can see the resulting path and where the population ended up.<br>
+                        </p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Web</p>
+                        <p>Javascript</p>
+                        <p>P5</p>
+                        <p>Algorithms</p>
+                        <p>Genetics</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>P5 Shaders</h3>
+                    <div class="largeBoxScrollBanner">
+                        <h3><b>Any code here is built as a solo project!</b></h3>
+                        <p>It may therefore be uncommented and/or difficult to read. This isn't how I would write production-level code!</p>
+                    </div>
+                    <div class="largeBoxScrollContent">
+                        <p>p5 includes ways to run shaders and as something I was interested in, I have a few that I have wrote. I have found that working with shaders inside of Unreal/Unity to be far easier than writing the raw code, but I like knowing what that code is as well. Nowadays I am more likely to use ShaderToy if I am looking to do something quick.</p>
+                        <p>                     
+                            <a href="https://editor.p5js.org/Pseu/sketches/kOCJm5y7o">Boids Shader</a> - <b>EPILEPSY WARNING</b> - Little boid shader.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/Xx5HJGLZm">Text Draw Shader</a> - Draws text with a shader.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/nEpG9LDoX">Conways Shader</a> - Conways game of life running as a shader. Click to add extra alive/dead cells.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/8zjATzXYI">Voronoi Shader</a> - Shader that shows a voronoi diagram. Drag points to move them.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/vwxak2h5X">Julia Set Shader</a> - Shader that shows a Julia set. Sliders can animate and do various things.<br>
+                        </p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Web</p>
+                        <p>Javascript</p>
+                        <p>P5</p>
+                        <p>Shaders</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>P5 Physics and Math</h3>
+                    <div class="largeBoxScrollBanner">
+                        <h3><b>Any code here is built as a solo project!</b></h3>
+                        <p>It may therefore be uncommented and/or difficult to read. This isn't how I would write production-level code!</p>
+                    </div>
+                    <div class="largeBoxScrollContent">
+                        <p>Anything that contains some element of physics or math at it's core idea.</p>
+                        <p>
+                            <a href="https://editor.p5js.org/Pseu/sketches/8wvoDsUvn">Serpinski Triangle</a> - Hit play to change where the 3 points are.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/Ar1NxaeZB">Quad Tree</a> - Just looking in to how quad trees work. It is not the greatest soluton and optimizations could definitely be made. Click to add particles. The number in the console is the amount of particles currently moving around.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/OPt2jyYIF">Sudoku Generator</a> - Uses wave function collapse to create a Sudoku.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/smzr0kp4R">Bezier Curve Animation</a> - Click somewhere on the canvas and it will play an animation of how a bezier curve would be drawn between the 3 points.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/WMVMtVolG">Two Point Pendulum</a> - Example of how chaos works. Minimal changes to starting conditions cause vastly different results.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/gJ3FjOJYh">Lorenz</a> - Runs a Lorenz attractor. Sliders at the bottom control the variables.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/3g9foY6BK">Strange Attractor</a> - Another attractor similar to Lorenz.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/nEdkBNyjR">Calculate PI with Darts</a> - Calculate PI by choosing a random point in the canvas (Square) then seeing if that point is less than a certain distance from the center. The ratio of points inside to outside multiplied by 4 approximates PI.<br>
+
+                        </p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Web</p>
+                        <p>Javascript</p>
+                        <p>P5</p>
+                        <p>Shaders</p>
+                    </div>
+                </div>
+            </div>
+            <div class="largeBoxScroll">
+                <div class="largeBoxScrollImageColumn">
+                    <img src="images/lights.jpg"/>
+                </div>
+                <div class="largeBoxScrollContentColumn">
+                    <h3>P5 Algorithms</h3>
+                    <div class="largeBoxScrollBanner">
+                        <h3><b>Any code here is built as a solo project!</b></h3>
+                        <p>It may therefore be uncommented and/or difficult to read. This isn't how I would write production-level code!</p>
+                    </div>
+                    <div class="largeBoxScrollContent">
+                        <p>Things that are running an algorithm of some description (Even if that algorithm is physics based or non-deterministic) and don't fit into the other categories neatly.</p>
+
+                        <p>
+                            <a href="https://editor.p5js.org/Pseu/sketches/WFd2m0Ue3T">Shouting Insects</a> - Uses the idea of ants to create a path between home (red) and food (green). So each particle can communicate the amount of steps they have taken to try and find their destination (home or food). If the ant has a lower number of steps other ants will follow it. Over time the path will get optimized.<br>  
+                            <a href="https://editor.p5js.org/Pseu/sketches/3R5kU9Xpq">Self Stabilizing Structures</a> - Uses attract/repel to form structures that maintain a distance from each other. Click a point to nudge it.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/-t_oMaoUQ">Attract and Repel Rules</a> - Particles are attracted or repelled from others with different weights and you can add or remove from the ruleset with (relative) ease.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/vn_NVYHnp">Flocking</a> - Flocking algorithm.<br>
+                            <a href="https://editor.p5js.org/Pseu/sketches/S2KWYC3mB">Animal Sim</a> - Animals run around eating plants that are generated. The population ebbs and flows with the abundance or lack of food.<br>
+                        </p>
+                    </div>
+                    <div class="tagBox">
+                        <p>Web</p>
+                        <p>Javascript</p>
+                        <p>P5</p>
+                        <p>Algorithms</p>
+                    </div>
                 </div>
             </div>
         </div>

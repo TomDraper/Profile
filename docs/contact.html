@@ -10,7 +10,7 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
     </style>
-
+    
     
 </head>
 
@@ -33,33 +33,34 @@
     <div class="contactGrid">
         <div class="emailBox">
             <div class="socialsTitleContainer">
-                <img class="emailIcon" src="images/unity_thumb.png"/>
+                <img class="emailIcon" src="images/icons/Mail.png"/>
                 <h3 class="greenText">Email</h3>
             </div>
-            <a>mythirdalias@gmail.com</a>
+            <a class="whiteLink" href="mailto:mythirdalias@gmail.com?subject=Hello, I saw your site!&body=Hello!%0D%0A%0D%0ASaw your site and would like to talk to you about...">mythirdalias@gmail.com</a>
         </div>
         <div class="socials">
             <div class="socialsTitleContainer">
-                <img class="emailIcon" src="images/unity_thumb.png" />
+                <img class="emailIcon" src="images/icons/Profile.png" />
                 <h3 class="greenText">Socials</h3>
             </div>
             <div class="socialLink">
-                <img class="socialIcon" src="images/unity_thumb.png" />
-                <p class>GitHub</p>
+                <img class="socialIcon" src="images/icons/code.png" />
+                <a href="https://github.com/TomDraper" class="whiteLink">GitHub</a>
             </div>
             <div class="socialLink">
-                <img class="socialIcon" src="images/unity_thumb.png" />
-                <p>Linked In</p>
+                <img class="socialIcon" src="images/icons/Briefcase.png" />
+                <a href="https://www.linkedin.com/in/tom-draper-88836321a" class="whiteLink">Linked In</a>
             </div>
         </div>
 
         <div class="contactForm">
             <h3>Send a Message</h3>
-            <form>
-                <div>Name <input type="text"></input></div><br>
-                <div>Email <input type="text"></input></div><br>
-                <div>Subject <input type="text"></input></div><br>
-                <div class="contactMessage"><textarea>Message...</textarea></div><br>
+            <p style="text-align: center;">Will send from your default email app! Not setting up a backend for a simple profile.</p>
+            <form id="contactForm">
+            <!-- <form action="mailto:mythirdalias@gmail.com" method="post" enctype="text/plain"> -->
+                <label>Name <input id="name" name="name" type="text"></input></label><br>
+                <label>Subject <input id="subject" name="subject" type="text"></input></label><br>
+                <div class="contactMessage"><textarea id="message" name="message" placeholder="Message..."></textarea></div><br>
                 <input type="submit" value="Send message"></input>
             </form>
         </div>
@@ -75,4 +76,5 @@
 
     <div class="bottomSpacer"></div>
 </body>
+<script src="js/contactForm.js"></script>
 </html>
