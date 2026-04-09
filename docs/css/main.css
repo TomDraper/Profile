@@ -1,0 +1,1033 @@
+:root {
+    /* Palette */
+    --white-text: #F4F4F5;
+    --green-text: #61BE80;
+    --grey-text: #AFD4D8;
+
+    --background-color: #09090B;
+    --secondary-background-color: #18181B;
+
+    --border-grey: #27272A;
+    --button-hover-color: #4D9A68;
+    --tag-background-color: #1C3725;
+    --icon-background-color: #162924;
+
+    /* Font Sizing */
+    --font-size-0: 0.75rem;
+    --font-size-1: 1rem;
+    --font-size-2: 1.25rem;
+    --font-size-3: 1.5625rem;
+    --font-size-4: 1.953125rem;
+    --font-size-5: 2.44140625rem;
+    --font-size-6: 3.051rem;
+    --font-size-7: 3.814rem;
+
+    /* Font Weights */
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /* Buttons */
+    --button-width: 160px;
+    --button-height: 50px;
+    --button-radius: 12px;
+
+    /* Gaps */
+    --gap-s: 6px;
+    --gap-m: 12px;
+    --gap-l: 18px;
+    --gap-xl: 24px;
+
+    /* Boxes */
+    --box-width: 410px;
+    --box-height: 215px;
+    --small-box-width: 300px;
+}
+
+html, body {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to bottom, var(--bg-gradient-start), var(--bg-gradient-end));
+    scroll-behavior: smooth;
+    font-family: 'Inter', 'Helvetica', 'Ariel', 'sans-serif';
+    font-size: 16px;
+    color: white;
+    background-color: var(--background-color);
+}
+
+h1 {
+    margin: 1rem;
+    font-size: var(--font-size-7);
+    line-height: 3rem;
+    font-weight: var(--font-weight-black);
+}
+
+h2 {
+    margin: 1rem;
+    font-size: var(--font-size-5);
+    font-weight: var(--font-weight-bold);
+}
+
+h3 {
+    margin: 1rem;
+    font-size: var(--font-size-3);
+    font-weight: var(--font-weight-medium);
+}
+
+p {
+    font-size: var(--font-size-1);
+    color: var(--grey-text);
+}
+
+a {
+    cursor: pointer;
+    color: var(--green-text);
+    text-decoration: underline;
+}
+
+a:visited {
+    color: var(--grey-text);
+}
+
+a:hover {
+    color: var(--white-text);
+}
+
+
+button {
+    cursor: pointer;
+}
+
+.greenText {
+    color: var(--green-text);
+}
+
+.whiteLink {
+    cursor: pointer;
+    color: var(--grey-text);
+}
+
+.whiteLink:hover {
+    color: var(--white-text);
+}
+
+.whiteLink:visited {
+    color: var(--green-text);
+}
+
+.navBar {
+    position: sticky;
+    height: 60px;
+    width: 100%;
+    background-color: black;
+    border-bottom: 1px var(--border-grey) solid;
+}
+
+.navBar > ul {
+    height: 100%;
+    margin: 0px;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    align-content: center;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    color: var(--grey-text);
+}
+
+.navBar > ul > li > a, 
+.navBar > ul > li > a:visited, 
+.navBar > ul > li > a:active
+{
+    display: flex;
+    background-color: transparent;
+    border: none;
+    height: 100%;
+    align-items:center;
+    cursor: pointer;
+    font-weight: var(--font-weight-light);
+    text-decoration: none;
+}
+
+.navBar > ul > li > a:not(.greenText), 
+.navBar > ul > li > a:visited:not(.greenText), 
+.navBar > ul > li > a:active:not(.greenText){
+    color: var(--grey-text);
+}
+
+.navBar > ul > li > a:hover,  .navBar > ul > li > a:active:hover{
+    color: var(--green-text);
+}
+
+.navBar > ul > li > a:visited {
+    color: var(--grey-text);
+}
+
+.navBar > ul > li > a:hover:not(.greenText) {
+    color: var(--white-text);
+}
+
+.navBar > ul > li:first-child {
+    margin-right: auto;
+}
+
+.navBar > ul > li:first-child > a {
+    font-weight: var(--font-weight-bold);
+}
+
+.navBar > ul > li {
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.splashPage {
+    height: 100%;
+    background-image: url("../images/splash_background3.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    resize: both;
+    z-index:-999;
+}
+
+.splashPageVignette {
+    height: 100%;
+    background-image: linear-gradient(to top, var(--background-color), rgba(0, 0, 0, 0.5), black);
+    
+    /* background-image: radial-gradient(rgba(0, 0, 0, 1), transparent); */
+}
+
+/* ---- Splash Page Title - Games Programmer ----*/
+.splashPageVignette > h1 {
+    width: 100%;
+}
+
+/* ---- Splash Page Name - Tom Draper ----*/
+.splashPageVignette > h2 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    width: 100%;
+}
+
+/* ---- Splash Page Name - Content Lines ----*/
+.splashPageVignette > h3 {
+    width: min(calc(100% - 1rem), 800px);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-self: center;
+}
+
+.horizontalContainer {
+    display: flex;
+    flex-direction: row;
+    gap: var(--gap-m);
+}
+
+.center {
+    align-items: center;
+    align-content: center;
+    align-self: center;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.btn {
+    width: var(--button-width);
+    height: var(--button-height);
+    border: hidden;
+    border-radius: var(--button-radius);
+}
+
+
+.greenButton {
+    color: var(--white-text);
+    font-size: var(--font-size-1);
+    background-color: var(--green-text);
+    transition: background-color 0.4s;
+}
+.greenButton:hover {
+    background-color: var(--button-hover-color);
+}
+
+.transparentButton {
+    color: var(--white-text);
+    background-color: transparent;
+    font-size: var(--font-size-1);
+    border: 1px var(--border-grey) solid;
+    transition: border 0.4s;
+}
+
+.transparentButton:hover {
+    border: 1px var(--button-hover-color) solid;
+}
+
+.boxGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--box-width));
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    height: fit-content;
+}
+
+.box {
+    border: 1px var(--border-grey) solid;
+    border-radius: var(--button-radius);
+    background-color: var(--secondary-background-color);
+    padding: var(--gap-m);
+    height: fit-content;
+}
+
+.boxIconBackground {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    background-color: var(--icon-background-color);
+    border-radius: var(--button-radius);
+    align-content: center;
+    justify-content: center;
+}
+
+.boxIcon {
+    height: 100%;
+    width: 100%;
+}
+
+.box > h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.box > p {
+    font-size: var(--font-size-1);
+    margin: 0;
+}
+
+.mainPageFooter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: var(--secondary-background-color);
+}
+
+.mainPageFooter > * {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottomSpacer {
+    height: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}
+
+.pageIntro {
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-top: 4rem;
+    overflow: hidden;
+}
+
+.pageIntroSideImage {
+    float: right;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    display: flex;
+    justify-self: flex-end;
+    width: min(500px, 100%);
+    aspect-ratio: auto 16/9;
+    border-radius: var(--button-radius);
+}
+
+.pageIntro > h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.pageIntro > div > h1 {
+    margin: 0;
+}
+
+.largeBoxGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, calc(50% - 1rem));
+    gap: 1rem;
+    justify-content: space-evenly;
+}
+
+.largeBox {
+    display: flex;
+    flex-direction: column;
+    border: 1px var(--border-grey) solid;
+    border-radius: var(--button-radius);
+    background-color: var(--secondary-background-color);
+}
+
+.largeBox:hover {
+    border: 1px var(--button-hover-color) solid;
+}
+
+.largeBox > img {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: inherit;
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+    background-color: var(--background-color);
+}
+
+.largeBox > h3 {
+    
+    padding: var(--gap-m);
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.largeBox > p {
+    padding: var(--gap-m);
+    font-size: var(--font-size-1);
+    margin: 0
+}
+
+.tagBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: var(--gap-s);
+}
+
+.tagBox > p {
+    background: var(--tag-background-color);
+    border: 1px solid var(--green-text);
+    width: fit-content;
+    height: 25px;
+    padding-left: var(--gap-m);
+    padding-right: var(--gap-m);
+    border-radius: 25px;
+    color: var(--green-text);
+    font-size: var(--font-size-0);
+    align-content: center;
+    margin: 0;
+}
+
+.largeBoxCarousel {
+    width: calc(100% - 128px);
+    height: fit-content;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    gap: 64px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    anchor-name: --largeBoxCarousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+}
+
+.luminousAnchor {
+    anchor-name: --luminousAnchor;
+}
+
+.sprungAnchor {
+    anchor-name: --sprungAnchor;
+}
+
+.webAnchor {
+    anchor-name: --webAnchor;
+}
+
+.largeBoxCarousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-s);
+    margin: 1rem;
+}
+
+.largeBoxCarousel::-webkit-scrollbar {
+    display: none;
+}
+
+.largeBoxCarousel::scroll-button(left), .largeBoxCarousel::scroll-button(right) {
+    content: "";
+    border: none;
+    border-radius: 50%;
+    background-image: url("../images/icons/LeftArrow.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: var(--icon-background-color);
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --largeBoxCarousel;
+    position-area: left;
+}
+
+.largeBoxCarousel::scroll-button(right) {
+    background-image: url("../images/icons/RightArrow.png");
+    position-area: right;
+}
+
+.largeBoxCarousel.luminousAnchor::scroll-button(left), .largeBoxCarousel.luminousAnchor::scroll-button(right) {
+    position-anchor: --luminousAnchor;
+}
+
+.largeBoxCarousel.sprungAnchor::scroll-button(left), .largeBoxCarousel.sprungAnchor::scroll-button(right) {
+    position-anchor: --sprungAnchor;
+}
+
+.largeBoxCarousel.webAnchor::scroll-button(left), .largeBoxCarousel.webAnchor::scroll-button(right) {
+    position-anchor: --webAnchor;
+}
+
+.largeBoxCarousel::scroll-button(left):disabled, .largeBoxCarousel::scroll-button(right):disabled {
+    background-color: transparent;
+    background-image: none;
+}
+
+.largeBoxScroll {
+    display: flex;
+    flex-direction: row;
+    min-width: calc(100% - 64px);
+    border: 1px var(--border-grey) solid;
+    border-radius: var(--button-radius);
+    background-color: var(--secondary-background-color);
+    scroll-snap-align: center;
+    padding: 1rem;
+    gap: var(--gap-m);
+}
+
+.largeBoxScrollBanner {
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--border-grey);
+    border: var(--green-text) 1px solid;
+
+}
+.largeBoxScrollBanner > h3 {
+    margin: 1rem;
+}
+.largeBoxScrollBanner > p {
+    margin: 1rem;
+}
+
+.largeBoxScroll::scroll-marker {
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--border-grey);
+    border-radius: 50%;
+}
+
+.largeBoxScroll::scroll-marker:target-current {
+    background-color: var(--green-text);
+}
+
+.largeBoxScrollImageColumn {
+    width: 40%;
+    align-content: center;
+    background-color:transparent;
+}
+
+.largeBoxScrollImageColumn > img {
+    background-color: transparent;
+    width: 100%;
+    aspect-ratio: auto 16/9;
+    border-radius: var(--button-radius);
+    object-fit: cover;
+}
+
+.largeBoxScrollContentColumn {
+    display: flex;
+    width: 100%;
+    max-height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap-m);
+}
+
+.largeBoxScrollContentColumn > h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.largeBoxScrollContent {
+    overflow-y: auto;
+    /* keep scrollbar seperated */
+    padding-right: var(--gap-m);
+}
+
+.largeBoxScrollContent p:first-child {
+    margin-top: 0;
+}
+.largeBoxScrollContent > p:last-child {
+    margin-bottom: 0;
+}
+
+/* Scrollbar */
+.largeBoxScrollContent::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+/* The buttons on the scrollbar (arrows pointing upwards and downwards) */
+.largeBoxScrollContent::-webkit-scrollbar-button {
+    height: 0px;
+}
+
+/* The draggable scrolling handle */
+.largeBoxScrollContent::-webkit-scrollbar-thumb {
+    background-color: var(--green-text);
+    border-radius: 50px;
+}
+.largeBoxScrollContent::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* The track (progress bar) of the scrollbar */
+.largeBoxScrollContent::-webkit-scrollbar-track {
+    background-color: var(--border-grey);
+    border-radius: 50px;
+}
+
+.largeBoxScroll:hover {
+    border: 1px var(--button-hover-color) solid;
+}
+
+
+
+.boxSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.boxSection > h1 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.largeBoxSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.largeBoxSection > h1 {
+    width: 100%;
+    margin: 0;
+}
+
+.paragraphBlock {
+    margin: 0
+}
+
+.paragraphBlock p:first-child {
+    margin-top: 0;
+}
+
+.paragraphBlock p:last-child {
+    margin-bottom: 0;
+}
+
+
+.smallBoxGrid {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, var(--small-box-width));
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.smallBox {
+    border: 1px var(--border-grey) solid;
+    border-radius: var(--button-radius);
+    background-color: var(--secondary-background-color);
+    padding: var(--gap-m);
+    
+}
+
+.smallBox > img {
+    width: 64px;
+    height: 64px;
+    background-color: var(--background-color);
+    object-fit: cover;
+}
+
+.smallBox > h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.smallBox > ul {
+    font-size: var(--font-size-1);
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.smallBox > ul > li {
+    font-size: var(--font-size-1);
+    color: var(--grey-text);
+    margin: 0;
+    padding: 0;
+}
+
+.smallBox > ul > li:before {
+    content: "";
+    margin-left: -0.5rem;
+}
+
+.experienceContainer {
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+
+.experienceContainer > .greenText {
+    margin-bottom: 2rem;
+}
+
+.experienceBlock {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-left: 5px var(--green-text) solid;
+    padding-left: 2rem;
+}
+
+.seperator {
+    width: 100%;
+    height: var(--gap-l);
+    border-bottom: 1px var(--border-grey) solid;
+    margin-bottom: var(--gap-l);
+}
+
+.experienceBlock > .description {
+    color: var(--white-text);
+}
+
+.contactIntro {
+    text-align: center;
+}
+
+.contactGrid {
+    width: min(700px, 100%);
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:    "emailBox socials"
+                            "contact contact";
+    gap: 1em;
+    margin-left: 4rem;
+    margin-right: 4rem;
+}
+
+.emailIcon {
+    width: 64px;
+    height: 64px;
+    object-fit: cover;
+}
+
+.socialIcon {
+    width: 32px;
+    height: 32px;
+    object-fit: cover;
+}
+
+.emailBox {
+    grid-area: emailBox;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--button-radius);
+    padding: 2rem;
+}
+
+.emailBox > .socialsTitleContainer {
+    margin-bottom: 1rem;
+}
+
+.emailBox > h3 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.socials {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    
+    grid-area: socials;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--button-radius);
+    padding: 2rem;
+    justify-content: center;
+}
+
+.socialsTitleContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+}
+
+.socialsTitleContainer > h3 {
+    margin: 0;
+}
+
+.socialLink {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.socialLink > p {
+    margin: 0;
+    align-self: center;
+}
+
+.contactForm{
+    grid-area: contact;
+    background-color: var(--secondary-background-color);
+    border-radius: var(--button-radius);
+    padding: 2rem;
+}
+
+.contactForm > h3 {
+    margin: 0;
+    text-align: center;
+    color: var(--green-text);
+    margin-bottom: 1rem;
+}
+
+.contactMessage {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: var(--white-text);
+}
+.contactMessage > textarea {
+    background-color: var(--background-color);
+    border-radius: var(--button-radius);
+    border: 1px var(--border-grey) solid;
+    resize: vertical;
+    min-height: 1rem;
+
+    color: var(--white-text);
+    text-align: left;
+    text-justify: initial;
+    padding: 1rem;
+    field-sizing: content;
+}
+.contactMessage > textarea:focus-visible {
+    outline: 1px var(--green-text) solid;
+}
+
+.contactForm > form > label:not(.contactMessage) {
+    display: grid;
+    grid-template-columns: 10% auto;
+    align-items: center;
+    height: 2rem;
+    gap: 1rem;
+    
+}
+.contactForm > form > label > input[type=text] {
+    background: var(--background-color);
+    border-radius: var(--button-radius);
+    border: 1px var(--border-grey) solid;
+    height: 100%;
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    color: var(--white-text);
+}
+
+.contactForm > form > label > input[type=text]:focus-visible {
+    outline: 1px var(--green-text) solid;
+}
+
+.contactForm > form > input[type=submit] {
+    background: var(--green-text);
+    color: var(--white-text);
+    height: var(--button-height);
+    border-radius: var(--button-radius);
+    border: 1px var(--border-grey) solid;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: var(--font-size-2);
+    color: var(--white-text);
+}
+
+
+
+
+/*#endregion*/
+
+@media (max-width: 1200px) {}
+
+
+@media (max-width: 1024px) {
+    .pageIntro{
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 4rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .pageIntro > h1 {
+        text-align: center;
+    }
+
+    .pageIntro > div {
+        width: 100%;
+    }
+
+    .pageIntroSideImage {
+        width: min(500px, 100%);
+        aspect-ratio: 16 / 9;
+        justify-self: center;
+        align-self: center;
+    }
+
+    .largeBoxGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 100%);
+        gap: 1rem;
+        margin-top: 3rem;
+        margin-left: 3rem;
+        margin-right: 3rem;
+        margin-bottom: 3rem;
+        justify-content: center;
+    }
+
+    .boxSection > h1 {
+        text-align: center;
+    }
+
+    .smallBoxGrid {
+        justify-content: center;
+    }
+
+    .experienceContainer > h1{
+        text-align: center;
+    }
+    .largeBoxScroll {
+        flex-direction: column;
+        height: 70vh;
+    }
+
+    .largeBoxCarousel::scroll-marker-group {
+        margin-bottom: 3rem;
+    }
+
+    .largeBoxScrollImageColumn {
+        display: flex;
+        width: 100%;
+        height: 30%;
+        align-content: center;
+        justify-content: center;
+    }
+
+    .largeBoxScrollImageColumn > img {
+        width: auto;
+    }
+
+    .largeBoxScrollContentColumn {
+        display: flex;
+        height: 100%;
+        max-height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        overflow: auto;
+        gap: var(--gap-m);
+    }
+
+    .largeBoxScrollContent {
+        overflow-y: auto;
+        height: 100%;
+        /* keep scrollbar seperated */
+        padding-right: var(--gap-m);
+    }
+
+    .tagBox {
+        margin-top: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    
+}
+
+@media (max-width: 640px) {
+    .pageIntro{
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+                                     
+    .boxSection {
+        margin: 0;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .boxSection > h1 {
+        margin: 0;
+        margin-bottom: 1rem;
+    }
+
+    .experienceContainer {
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+
+    .navBar > ul {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .largeBoxScrollImageColumn > img{
+        width: 100%;
+    }
+
+}
