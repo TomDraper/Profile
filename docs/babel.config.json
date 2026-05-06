@@ -1,6 +1,0 @@
-{
-  "presets": ["@babel/preset-env"],
-  "scripts": {
-    "reactText": "/react/reactText.js",
-  }
-}
