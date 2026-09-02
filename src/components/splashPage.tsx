@@ -10,7 +10,7 @@ export default function SplashPage(){
                 <h1 className="greenText">Games Programmer</h1>
                 <h3>Creating immersive gaming experiences, improving tooling to enable faster development and polishing with pixel perfect UI designed for a seamless user experience. 
                     <p>Created using React.
-                    <br/><a href="https://github.com/TomDraper/React-Profile/tree/master">Source Code</a></p>
+                    <br/><a href="https://github.com/TomDraper/Profile">Source Code</a></p>
                 </h3>
                 
                 <div className="horizontalContainer center">
