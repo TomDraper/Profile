@@ -1,0 +1,37 @@
+.splashPage {
+    height: 100vh;
+    background-image: url("../images/splash_background3.avif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: 50%;
+    resize: both;
+    z-index:-999;
+}
+
+.splashPageVignette {
+    height: 100%;
+    background-image: linear-gradient(to top, var(--background-color), rgba(0, 0, 0, 0.5), black);
+    
+    /* background-image: radial-gradient(rgba(0, 0, 0, 1), transparent); */
+}
+
+/* ---- Splash Page Title - Games Programmer ----*/
+.splashPageVignette > h1 {
+    width: 100%;
+}
+
+/* ---- Splash Page Name - Tom Draper ----*/
+.splashPageVignette > h2 {
+    margin-top: -1rem;
+    margin-bottom: -1rem;
+    width: 100%;
+}
+
+/* ---- Splash Page Name - Content Lines ----*/
+.splashPageVignette > h3 {
+    width: min(calc(100% - 1rem), 800px);
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    justify-self: center;
+}
+

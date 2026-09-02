@@ -1,0 +1,17 @@
+.banner {
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    background-color: var(--border-grey);
+    border: var(--green-text) 1px solid;
+}
+
+.banner > h3 {
+    margin: 1rem;
+}
+
+.banner > p {
+    margin: 1rem;
+}

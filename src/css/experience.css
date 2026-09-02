@@ -1,0 +1,35 @@
+.experienceContainer {
+    margin-left: var(--page-margin);
+    margin-right: var(--page-margin);
+}
+
+.experienceContainer > .greenText {
+    margin-bottom: 2rem;
+    margin-left: 0;
+}
+
+.experienceBlock {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border-left: 5px var(--green-text) solid;
+    padding-left: 2rem;
+}
+
+.seperator {
+    width: 100%;
+    height: var(--gap-l);
+    border-bottom: 1px var(--border-grey) solid;
+    margin-bottom: var(--gap-l);
+}
+
+.experienceBlock > .description {
+    color: var(--white-text);
+}
+
+@media (max-width: 768px) {
+    .experienceBlock {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 1rem;
+    }
+}

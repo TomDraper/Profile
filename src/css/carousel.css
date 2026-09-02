@@ -1,0 +1,248 @@
+.largeBoxCarousel {
+    width: calc(100% - 128px);
+    height: fit-content;
+    display: flex;
+    align-self: center;
+    flex-direction: row;
+    gap: 64px;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    anchor-name: --largeBoxCarousel;
+    scroll-snap-type: x mandatory;
+    scroll-marker-group: after;
+}
+
+.luminousAnchor {
+    anchor-name: --luminousAnchor;
+}
+
+.sprungAnchor {
+    anchor-name: --sprungAnchor;
+}
+
+.webAnchor {
+    anchor-name: --webAnchor;
+}
+
+.largeBoxCarousel::scroll-marker-group {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-s);
+    margin: 1rem;
+    margin-bottom: 2rem;
+}
+
+.largeBoxCarousel::-webkit-scrollbar {
+    display: none;
+}
+
+.largeBoxCarousel::scroll-button(left), .largeBoxCarousel::scroll-button(right) {
+    content: "";
+    border: none;
+    border-radius: 50%;
+    background-image: url("../images/icons/LeftArrow.png");
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: var(--icon-background-color);
+    width: 64px;
+    height: 64px;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --largeBoxCarousel;
+    position-area: left;
+}
+
+.largeBoxCarousel::scroll-button(right) {
+    background-image: url("../images/icons/RightArrow.png");
+    position-area: right;
+}
+
+.largeBoxCarousel.luminousAnchor::scroll-button(left), .largeBoxCarousel.luminousAnchor::scroll-button(right) {
+    position-anchor: --luminousAnchor;
+}
+
+.largeBoxCarousel.sprungAnchor::scroll-button(left), .largeBoxCarousel.sprungAnchor::scroll-button(right) {
+    position-anchor: --sprungAnchor;
+}
+
+.largeBoxCarousel.webAnchor::scroll-button(left), .largeBoxCarousel.webAnchor::scroll-button(right) {
+    position-anchor: --webAnchor;
+}
+
+.largeBoxCarousel::scroll-button(left):hover, .largeBoxCarousel::scroll-button(right):hover {
+    background-color: var(--green-text);
+}
+
+.largeBoxCarousel::scroll-button(left):disabled, .largeBoxCarousel::scroll-button(right):disabled {
+    background-color: transparent;
+    background-image: none;
+}
+
+.largeBoxScroll {
+    display: flex;
+    flex-direction: row;
+    min-width: calc(100% - 64px);
+    border: 1px var(--border-grey) solid;
+    border-radius: var(--button-radius);
+    background-color: var(--secondary-background-color);
+    scroll-snap-align: center;
+    padding: 1rem;
+    gap: var(--gap-m);
+}
+
+.largeBoxScroll::scroll-marker {
+    content: '';
+    height: 1rem;
+    width: 1rem;
+    background-color: var(--border-grey);
+    border-radius: 50%;
+}
+
+.largeBoxScroll::scroll-marker:target-current {
+    background-color: var(--green-text);
+}
+
+.largeBoxScrollImageColumn {
+    width: 40%;
+    align-content: center;
+    background-color:transparent;
+}
+
+.largeBoxScrollImageColumn > img {
+    background-color: transparent;
+    width: 100%;
+    aspect-ratio: auto 16/9;
+    border-radius: var(--button-radius);
+    object-fit: cover;
+}
+
+.largeBoxScrollContentColumn {
+    display: flex;
+    width: 100%;
+    max-height: 300px;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--gap-m);
+}
+
+.largeBoxScrollContentColumn > h3 {
+    margin: 0;
+    padding: 0;
+}
+
+.largeBoxScrollContent {
+    overflow-y: auto;
+    /* keep scrollbar seperated */
+    padding-right: var(--gap-m);
+}
+
+.largeBoxScrollContent p:first-child {
+    margin-top: 0;
+}
+.largeBoxScrollContent > p:last-child {
+    margin-bottom: 0;
+}
+
+/* Scrollbar */
+.largeBoxScrollContent::-webkit-scrollbar {
+    background-color: transparent;
+    width: 8px;
+}
+
+/* The buttons on the scrollbar (arrows pointing upwards and downwards) */
+.largeBoxScrollContent::-webkit-scrollbar-button {
+    height: 0px;
+}
+
+/* The draggable scrolling handle */
+.largeBoxScrollContent::-webkit-scrollbar-thumb {
+    background-color: var(--green-text);
+    border-radius: 50px;
+}
+.largeBoxScrollContent::-webkit-scrollbar-thumb:hover {
+    background-color: var(--button-hover-color);
+}
+
+/* The track (progress bar) of the scrollbar */
+.largeBoxScrollContent::-webkit-scrollbar-track {
+    background-color: var(--border-grey);
+    border-radius: 50px;
+}
+
+.largeBoxScroll:hover {
+    border: 1px var(--button-hover-color) solid;
+}
+
+@media (max-width: 768px) {
+    .largeBoxCarousel {
+        width: calc(100% - 16px);
+        height: 600px;
+        gap: 32px;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scroll-marker-group: after;
+    }
+
+    .largeBoxScroll {
+        overflow-y: auto;
+        min-width: calc(100% - 64px);
+        max-height: 100%;
+        flex-direction: column;
+        gap: var(--gap-s);
+    }
+
+    /* Scrollbar */
+    .largeBoxScroll::-webkit-scrollbar {
+        background-color: transparent;
+        width: 8px;
+    }
+
+    /* The buttons on the scrollbar (arrows pointing upwards and downwards) */
+    .largeBoxScroll::-webkit-scrollbar-button {
+        height: 8px;
+    }
+
+    /* The draggable scrolling handle */
+    .largeBoxScroll::-webkit-scrollbar-thumb {
+        background-color: var(--green-text);
+        border-radius: 50px;
+    }
+    .largeBoxScroll::-webkit-scrollbar-thumb:hover {
+        background-color: var(--button-hover-color);
+    }
+
+    /* The track (progress bar) of the scrollbar */
+    .largeBoxScroll::-webkit-scrollbar-track {
+        background-color: var(--border-grey);
+        border-radius: 50px;
+    }
+
+    .largeBoxScrollImageColumn {
+        width: min(100%, 600px);
+        aspect-ratio: auto 16/9;
+    }
+
+    .largeBoxScrollContentColumn {
+        max-height: fit-content;
+    }
+
+    .largeBoxCarousel::scroll-button(left), .largeBoxCarousel::scroll-button(right) {
+        display: flex;
+        content: "";
+        border: none;
+        border-radius: 0%;
+        background-size: 28px;
+        width: 32px;
+        height: 500px;
+        cursor: pointer;
+        position: fixed;
+        position-anchor: --largeBoxCarousel;
+        position-area: left;
+        overflow-y: auto;
+    }
+
+    .largeBoxCarousel::scroll-button(right) {
+        background-image: url("../images/icons/RightArrow.png");
+        position-area: right;
+    }
+}

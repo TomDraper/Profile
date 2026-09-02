@@ -1,0 +1,22 @@
+.tagBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    gap: var(--gap-s);
+}
+
+.tagBox > p {
+    background: var(--tag-background-color);
+    border: 1px solid var(--green-text);
+    width: fit-content;
+    height: 25px;
+    padding-left: var(--gap-m);
+    padding-right: var(--gap-m);
+    border-radius: 25px;
+    color: var(--green-text);
+    font-size: var(--font-size-0);
+    align-content: center;
+    margin: 0;
+}

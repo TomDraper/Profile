@@ -1,0 +1,146 @@
+.boxSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    padding-bottom: 1rem;
+    margin-left: var(--page-margin);
+    margin-right: var(--page-margin);
+}
+
+.boxSection > h1 {
+    width: 100%;
+    margin: 0;
+    margin-bottom: 2rem;
+}
+
+.boxGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, var(--box-width));
+    grid-template-rows: auto;
+    gap: 1rem;
+    margin-top: 3rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-bottom: 3rem;
+    justify-content: center;
+    height: fit-content;
+}
+
+.box {
+    border: 1px var(--border-grey) solid;
+    border-radius: var(--button-radius);
+    background-color: var(--secondary-background-color);
+    padding: var(--gap-m);
+    height: fit-content;
+}
+
+.box:hover {
+    border: 1px var(--green-text) solid;
+}
+
+.boxIconBackground {
+    width: 32px;
+    height: 32px;
+    padding: 8px;
+    background-color: var(--icon-background-color);
+    border-radius: var(--button-radius);
+    align-content: center;
+    justify-content: center;
+}
+
+.boxIcon {
+    height: 100%;
+    width: 100%;
+}
+
+.box > h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.box > p {
+    font-size: var(--font-size-1);
+    margin: 0;
+}
+
+.smallBoxGrid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 1rem;
+}
+
+.smallBox {
+    width: min(250px, 50%);
+    border: 1px var(--border-grey) solid;
+    border-radius: var(--button-radius);
+    background-color: var(--secondary-background-color);
+    padding: var(--gap-m);
+}
+
+.smallBox:hover {
+    border: 1px var(--green-text) solid;
+}
+
+.smallBox > img {
+    width: 64px;
+    height: 64px;
+    background-color: var(--background-color);
+    object-fit: cover;
+}
+
+.smallBox > h3 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.smallBox > ul {
+    font-size: var(--font-size-1);
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+}
+
+.smallBox > ul > li {
+    font-size: var(--font-size-1);
+    color: var(--grey-text);
+    margin: 0;
+    padding: 0;
+}
+
+.smallBox > ul > li:before {
+    content: "";
+    margin-left: -0.5rem;
+}
+
+.smallImageCard {
+    width: min(256px, 100%);
+}
+
+.smallImageCardImage {
+    width: min(256px, 100%);
+    height: auto;
+}
+
+@media (max-width: 768px) {    
+    .boxIconBackground {
+        align-self: center;
+    }
+
+    .smallBoxGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 100%);
+    }
+
+    .smallBox {
+        width: fit-content;
+        min-width: min(var(--small-box-width), 100%);
+        justify-self: center;
+        justify-items: center;
+    }
+}

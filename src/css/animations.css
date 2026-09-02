@@ -1,0 +1,37 @@
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+.fadeIn {
+    animation: fadeIn 2s;
+    animation-fill-mode: forwards;
+}
+
+.fadeOut {
+    animation: fadeOut 2s;
+    animation-fill-mode: forwards;
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity 2s;
+    will-change: opacity;
+}
+
+.fade.inView {
+    opacity: 1;
+}

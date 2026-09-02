@@ -1,0 +1,65 @@
+:root {
+    /* Palette */
+    --white-text: #F4F4F5;
+    --green-text: #61BE80;
+    --grey-text: #AFD4D8;
+
+    --background-color: #09090B;
+    --secondary-background-color: #18181B;
+
+    --border-grey: #27272A;
+    --button-hover-color: #4D9A68;
+    --tag-background-color: #1C3725;
+    --icon-background-color: #162924;
+
+    /* Font Sizing */
+    --font-size-0: 0.75rem;
+    --font-size-1: 1rem;
+    --font-size-2: 1.25rem;
+    --font-size-3: 1.5625rem;
+    --font-size-4: 1.953125rem;
+    --font-size-5: 2.44140625rem;
+    --font-size-6: 3.051rem;
+    --font-size-7: 3.814rem;
+
+    /* Font Weights */
+    --font-weight-thin: 100;
+    --font-weight-extralight: 200;
+    --font-weight-light: 300;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+
+    /* Buttons */
+    --button-width: 160px;
+    --button-height: 50px;
+    --button-radius: 12px;
+
+    /* Gaps */
+    --gap-s: 6px;
+    --gap-m: 12px;
+    --gap-l: 18px;
+    --gap-xl: 24px;
+
+    --page-margin: 4rem;
+
+    /* Boxes */
+    --box-width: 410px;
+    --box-height: 215px;
+    --small-box-width: 300px;
+}
+
+@media (max-width: 768px) {
+    :root {
+        --page-margin: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    :root {
+        --page-margin: 1rem;
+    }
+}

@@ -1,0 +1,33 @@
+.pageIntro {
+    margin-left: var(--page-margin);
+    margin-right: var(--page-margin);
+    margin-top: var(--page-margin);
+    overflow: hidden;
+}
+
+.pageIntroSideImage {
+    float: right;
+    margin-left: 1rem;
+    display: flex;
+    justify-self: flex-end;
+    width: min(400px, 100%);
+    aspect-ratio: auto 16/9;
+    border-radius: var(--button-radius);
+}
+
+.pageIntro > h1 {
+    margin: 0;
+    margin-bottom: 1rem;
+}
+
+.pageIntro > div > h1 {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .pageIntroSideImage {
+        justify-self: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+}

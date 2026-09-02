@@ -1,0 +1,55 @@
+.terminal {
+  background: black;
+  color: #00ffcc;
+  font-family: monospace;
+  padding: 20px;
+  white-space: pre-wrap;
+}
+.terminalInputContainer {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+}
+.terminalInput {
+    background: transparent;
+    color: #00ffcc;
+    font-family: monospace;
+    border: 0px;
+    border-bottom: 1px #00ffcc solid;
+    caret-color: #00ffcc;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    padding:0px;
+}
+
+.terminalInputWrapper {
+    position: relative;
+    background: transparent;
+    color: #00ffcc;
+    font-family: monospace;
+    border: 0px;
+    caret-color: #00ffcc;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+}
+
+.terminalGhost {
+    position:absolute;
+    background: transparent;
+    color: transparent;
+    font-family: monospace;
+    caret-color: #00ffcc;
+    font-size: 16px;
+    border: none;
+    outline: none;
+}
+
+.ghostText {
+  color: darkgrey; /* faded */
+}
+
+.tabHighlight{
+    background-color:darkgrey;
+}

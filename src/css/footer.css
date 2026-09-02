@@ -1,0 +1,22 @@
+.mainPageFooter {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    background-color: var(--secondary-background-color);
+}
+
+.mainPageFooter > * {
+    margin: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottomSpacer {
+    height: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+}

@@ -1,0 +1,24 @@
+.largeBoxSection {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+    margin-left: var(--page-margin);
+    margin-right: var(--page-margin);
+}
+
+.projectsSection {
+    display: flex;
+    flex-direction:column;
+    width: 100%;
+}
+
+.projectsSection > div > h1 {
+    width: 100%;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .projectsSection > h1 {
+        line-height: var(--font-size-7);   
+    }
+}
