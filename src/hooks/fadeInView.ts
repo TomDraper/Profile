@@ -8,7 +8,6 @@ export function useFadeInView(additionalClassNames:string) {
         initialInView: true
     });
 
-    console.log(`${ref.name} in view: ${inView}`)
     const className = additionalClassNames + ` ${inView ? "fade inView" : "fade"}`;
 
     return { ref, className, inView };
