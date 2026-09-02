@@ -5,16 +5,17 @@ import navIcon from '../images/icons/Menu.png'
 type NavBarLinkProp = {
     current: boolean,
     text: string,
-    url: string
+    url: string,
+    hidden: boolean
 }
 
 var navBarLinks : NavBarLinkProp[] = [
-    { current: false, text: "Home", url: "/" },
-    { current: false, text: "Projects", url: "/projects" },
-    { current: false, text: "About", url: "/about" },
-    { current: false, text: "Contact", url: "/contact" },
-    { current: false, text: "Web", url: "/web"},
-    { current: false, text: "Terminal", url: "/terminalGame"}
+    { current: false, text: "Home", url: "/", hidden: false },
+    { current: false, text: "Projects", url: "/projects", hidden: false },
+    { current: false, text: "About", url: "/about", hidden: false },
+    { current: false, text: "Contact", url: "/contact", hidden: false },
+    { current: false, text: "Web", url: "/web", hidden: true },
+    { current: false, text: "Terminal", url: "/terminalGame", hidden: false }
 ]
 
 export default function NavBar({selected}:{selected:number}){
@@ -45,7 +46,8 @@ function NavBarLinks({ props } : { props:NavBarLinkProp[] }){
     ));
 }
 
-function NavBarLink({ current, text, url }: NavBarLinkProp){
+function NavBarLink({ current, text, url, hidden }: NavBarLinkProp){
+    if (hidden) return null;
     return <li><Link className={current ? "greenText" : "greyText"} to={url} onClick={hideMobileNav}>{text}</Link></li>;
 }
 
